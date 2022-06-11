@@ -1,13 +1,5 @@
+@DieticianLogin
 Feature: Dietician Home Page
-
-  Background: 
-
-  Scenario Outline: 
-    Given User logged in successfully to the Dietician website with email,password from "<sheet name>" and <row number>
-
-    Examples: 
-      | SheetName | RowNumber |
-      | login     |         0 |
 
   Scenario: Verify Dietician Home Page After Login
     When User is on the Dietician Home page
