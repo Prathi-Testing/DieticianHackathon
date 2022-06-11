@@ -1,14 +1,5 @@
+@DieticianLogin
 Feature: Add New Patient Page
-
-  Background: 
-
-  Scenario Outline: 
-    Given User logged in successfully to the Dietician website with email,password from "<SheetName>" and <RowNumber>
-    When User clicks on New Patient button.
-
-    Examples: 
-      | SheetName | RowNumber |
-      | login     |         0 |
 
   Scenario: Add New Patient Details
     Given User is on the Add New Patient Page
