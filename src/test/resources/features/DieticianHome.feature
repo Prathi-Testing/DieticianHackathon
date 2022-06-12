@@ -34,11 +34,11 @@ Feature: Dietician Home Page
 
   Scenario: Verify Dietician Home Page Side Bar After Login
     When User is on the Dietician Home page
-    Then User can see "Banner or Announcements" section in right side bar
+    Then User can see Banner or Announcements section in right side bar
 
   Scenario: Dietician Home Page "Logged in as Dietician name" message verification After Login
     When User is on the Dietician Home page
-    Then User can see "Logged in as Dietician name" message in top of right side bar
+    Then User can see Logged in as Dietician name message in top of right side bar
 
   Scenario: Verify Dietician Home Page Content After Login
     When User is on the Dietician Home page
@@ -46,5 +46,5 @@ Feature: Dietician Home Page
 
   Scenario: Verify Dietician Home Page SIGN OUT After Login
     Given User is on the Dietician Home page
-    When User can see "SIGN OUT" button after successful login
-    Then User can click on "SIGN OUT" button for logging off successfully
+    When User can see SIGN OUT button after successful login
+    Then User can click on SIGN OUT button for logging off successfully
