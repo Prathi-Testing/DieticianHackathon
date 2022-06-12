@@ -20,7 +20,7 @@ public class PageObjectManager {
 	private ContactusPage contactusPage;
 	private SignUpPage signupPage;
 
-	
+
 	public PageObjectManager(WebDriver driver)
 	{
 		this.driver = driver;
@@ -36,7 +36,7 @@ public class PageObjectManager {
 		dieticianHP = new DieticianHomePage(driver);
 		return dieticianHP;
 	}
-	
+
 	public HomePage getHomePage()
 
 	{
