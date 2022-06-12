@@ -10,7 +10,7 @@ public class PageObjectManager {
 	public WebDriver driver;
 	private DieticianHomePage dieticianHP;
 	private NewPatientPage newPatientPg;
-	
+		
 	public PageObjectManager(WebDriver driver)
 	{
 		this.driver = driver;
@@ -26,5 +26,6 @@ public class PageObjectManager {
 		dieticianHP = new DieticianHomePage(driver);
 		return dieticianHP;
 	}
-
+	
+	
 }
