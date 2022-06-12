@@ -1,4 +1,4 @@
-package com.qa.pages;
+package com.pages;
 
 import org.openqa.selenium.SearchContext;
 import org.openqa.selenium.WebElement;
@@ -30,6 +30,38 @@ public class SignInPage extends Base  {
 	
 	@FindBy(xpath="//a[contains(text(),'Not a member yet?')]")
 	WebElement NotMemberLink;
+	
+	@FindBy(xpath="//a[contains(text(),'Log in with your email')]")
+	WebElement LogInHeading;
+	
+	@FindBy(xpath="//a(@id='Password')")
+	WebElement LogInForgotPassword;
+	
+	@FindBy(xpath="//input(@id='email')")
+	WebElement Email;
+	
+	@FindBy(xpath="//input(@class='pass")
+	WebElement LogInPassword;
+	
+	@FindBy(xpath="//button(@id='login')")
+	WebElement EmailLogIn;
+	
+	@FindBy(xpath="//*[contains(text(),'Or log in with')]")
+	WebElement textLogIn;
+	
+	@FindBy(xpath="//a[contains(text(),'Facebook')]")
+	WebElement FacebookLink;
+	
+	@FindBy(xpath="//a[contains(text(),'Google')]")
+	WebElement GoogleLink;
+	
+	@FindBy(xpath="//a[contains(text(),'Sign up here')]")
+	WebElement SignUpLink;
+	
+	
+	
+	
+	
 	
 	
 	//initializing page objects

@@ -17,7 +17,7 @@ import org.openqa.selenium.firefox.FirefoxProfile;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Base {
-	private WebDriver driver;
+	protected WebDriver driver;
 	private FileInputStream FIS;
 	private Properties prop;
 	private String browserProp;
