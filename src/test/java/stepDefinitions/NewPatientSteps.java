@@ -36,8 +36,8 @@ public class NewPatientSteps {
 	    }
 
 	    @Then("^Unable to update and show error message as \"([^\"]*)\" and (.+)$")
-	    public void unable_to_update_and_show_error_message_as_something_and(String sheetname, String rownumber, String strArg1) throws Throwable {
-	        throw new PendingException();
+	    public void unable_to_update_and_show_error_message_as_something_and(String sheetname, String rownumber, String strArg1) {
+	       
 	    }
 
 	    @When("^User attempts to put numeric value in Full Name field as in \"([^\"]*)\" and (.+)$")
