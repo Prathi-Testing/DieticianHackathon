@@ -26,7 +26,7 @@ Feature: Add New Patient Page
 
   Scenario Outline: "Full Name" Field Empty Value Validation
     Given User is on the Add New Patient Page
-    When User attempts to submit the form without filling up "Full Name" field
+    When User attempts to submit the form without filling up Full Name field as in "<SheetName>" and <RowNumber>
     Then Unable to enter and show error message as in "<SheetName>" and <RowNumber>
 
     Examples: 
@@ -35,7 +35,7 @@ Feature: Add New Patient Page
 
   Scenario Outline: "Addess line 1" Field Empty Value Validation
     Given User is on the Add New Patient Page
-    When User does not enter any value in Addess line 1 field
+    When User does not enter any value in Addess line 1 field as in "<SheetName>" and <RowNumber>
     Then Unable to enter and show error message as in "<SheetName>" and <RowNumber>
 
     Examples: 
@@ -44,7 +44,7 @@ Feature: Add New Patient Page
 
   Scenario Outline: "Country" Field Empty Value Validation
     Given User is on the Add New Patient Page
-    When User attempts to submit the form without selecting any value for Country field
+    When User attempts to submit the form without selecting any value for Country field as in "<SheetName>" and <RowNumber>
     Then Unable to enter and show error message as in "<SheetName>" and <RowNumber>
 
     Examples: 
@@ -62,7 +62,7 @@ Feature: Add New Patient Page
 
   Scenario Outline: City Field Empty Value Validation
     Given User is on the Add New Patient Page
-    When User attempts to submit the form without filling up City field
+    When User attempts to submit the form without filling up City field as in "<SheetName>" and <RowNumber>
     Then Unable to enter and show error message as in "<SheetName>" and <RowNumber>
 
     Examples: 
@@ -80,7 +80,7 @@ Feature: Add New Patient Page
 
   Scenario Outline: State, province or region Field Empty Value Validation
     Given User is on the Add New Patient Page
-    When User attempts to submit the form without filling up State, province or region field
+    When User attempts to submit the form without filling up State, province or region field as in "<SheetName>" and <RowNumber>
     Then Unable to enter and show error message as in "<SheetName>" and <RowNumber>
 
     Examples: 
@@ -89,7 +89,7 @@ Feature: Add New Patient Page
 
   Scenario Outline: "Postal code" Field Empty Value Validation
     Given User is on the Add New Patient Page
-    When User attempts to submit the form without filling up Postal code field
+    When User attempts to submit the form without filling up Postal code field as in "<SheetName>" and <RowNumber>
     Then Unable to enter and show error message as in "<SheetName>" and <RowNumber>
 
     Examples: 
@@ -98,7 +98,7 @@ Feature: Add New Patient Page
 
   Scenario Outline: Postal code Field Wrong Data Format Validation
     Given User is on the Add New Patient Page
-    When User entered not supported data format in Postal code field
+    When User entered not supported data format in Postal code field as in "<SheetName>" and <RowNumber>
     Then Unable to enter and show error message as in "<SheetName>" and <RowNumber>
 
     Examples: 
@@ -107,7 +107,7 @@ Feature: Add New Patient Page
 
   Scenario Outline: Email Field Empty Value Validation
     Given User is on the Add New Patient Page
-    When User does not enter any value in Email field
+    When User does not enter any value in Email field as in "<SheetName>" and <RowNumber>
     Then Unable to enter and show error message as in "<SheetName>" and <RowNumber>
 
     Examples: 
@@ -125,7 +125,7 @@ Feature: Add New Patient Page
 
   Scenario Outline: Phone number Field Character Value Validation
     Given User is on the Add New Patient Page
-    When User attempts to put characters in "Phone number" field as in "<SheetName>" and <RowNumber>
+    When User attempts to put characters in Phone number field as in "<SheetName>" and <RowNumber>
     Then Unable to enter and show error message as in "<SheetName>" and <RowNumber>
 
     Examples: 
@@ -134,7 +134,7 @@ Feature: Add New Patient Page
 
   Scenario Outline: Phone number Field Empty Value Validation
     Given User is on the Add New Patient Page
-    When User attempts to submit the form without filling up Phone number field
+    When User attempts to submit the form without filling up Phone number field as in "<SheetName>" and <RowNumber>
     Then Unable to enter and show error message as in "<SheetName>" and <RowNumber>
 
     Examples: 
@@ -143,7 +143,7 @@ Feature: Add New Patient Page
 
   Scenario Outline: Phone number should be 10 digits
     Given User is on the Add New Patient Page
-    When User fills up the form with valid data as in "<SheetName>" and <RowNumber>
+    When User fills up the form with valid phone as in "<SheetName>" and <RowNumber>
     Then User can see Add New Patient button
 
     Examples: 
@@ -153,7 +153,7 @@ Feature: Add New Patient Page
   Scenario Outline: Phone number boundary value less then 10 digits
     Given User is on the Add New Patient Page
     When User fills up the form with Data less than 10 as in "<SheetName>" and <RowNumber>
-    Then User should receive error message as in "<SheetName>" and <RowNumber>
+    Then Unable to enter and show error message as in "<SheetName>" and <RowNumber>
 
     Examples: 
       | SheetName        | RowNumber |
@@ -162,7 +162,7 @@ Feature: Add New Patient Page
   Scenario Outline: "Phone number " boundary value more then 10 digits
     Given User is on the Add New Patient Page
     When User fills up the form with Data more than 10 as in "<SheetName>" and <RowNumber>
-    Then User should receive error message as in "<SheetName>" and <RowNumber>
+    Then Unable to enter and show error message as in "<SheetName>" and <RowNumber>
 
     Examples: 
       | SheetName        | RowNumber |
@@ -170,21 +170,12 @@ Feature: Add New Patient Page
 
   Scenario Outline: "Phone number" special character validation
     Given User is on the Add New Patient Page
-    When User fills up the form with invalid characters as in "<SheetName>" and <RowNumber>
-    Then User should receive error message as in "<SheetName>" and <RowNumber>
+    When User fills up the phone number with invalid characters as in "<SheetName>" and <RowNumber>
+    Then Unable to enter and show error message as in "<SheetName>" and <RowNumber>
 
     Examples: 
       | SheetName        | RowNumber |
       | NewPatient_Phone |         5 |
-
-  Scenario Outline: Country code has to entered in phone right
-    Given User is on the Add New Patient Page
-    When User fills up the form without country code
-    Then User should receive error message as in "<SheetName>" and <RowNumber>
-
-    Examples: 
-      | SheetName        | RowNumber |
-      | NewPatient_Phone |         6 |
 
   Scenario Outline: Inserting Valid New Patient data submission
     Given User is on the Add New Patient Page
@@ -193,7 +184,7 @@ Feature: Add New Patient Page
     
     Examples: 
       | SheetName        | RowNumber |
-      | NewPatient_Phone |         7 |
+      | ValidNewPatient  |         7 |
 
   Scenario Outline: Valid New Patient data submission
     Given User is on the Add New Patient Page
@@ -202,5 +193,5 @@ Feature: Add New Patient Page
     
     Examples: 
       | SheetName        | RowNumber |
-      | NewPatient_Phone |         7 |
+      | ValidNewPatient  |         7 |
     

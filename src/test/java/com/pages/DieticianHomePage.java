@@ -32,6 +32,7 @@ public class DieticianHomePage {
 	
 	public DieticianHomePage(WebDriver driver)
 	{
+		this.driver = driver;
 		PageFactory.initElements(driver,this);
 	}
 	
