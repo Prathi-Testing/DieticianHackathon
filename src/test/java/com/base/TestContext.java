@@ -13,6 +13,7 @@ public class TestContext {
 	public String expectedDieticianHomePageTitle = "Dietician Home";
 	public String expectedMyPatientTitle = "My Patient";
 	public String expectedDietPlansTitle = "Diet Plans";
+	public String expectedHomePageTitle = "Dietician software";
 	public String url;
 	public String registerTitle;
 	
