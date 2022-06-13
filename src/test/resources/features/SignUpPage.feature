@@ -77,7 +77,7 @@ Scenario Outline: Invalid credentials in Password
 Scenario Outline: Empty data in field 
 
 	When User submit form without entering data "<sheetName>" and <rowNumber> 
-	Then User should receive error message "<sheetName>" and <rowNumber> 
+	Then User should receive error message from sheet "<sheetName>" and <rowNumber> 
 	
 	Examples: 
 		|sheetName   | rowNumber|
