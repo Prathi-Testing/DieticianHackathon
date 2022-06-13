@@ -1,5 +1,7 @@
 package stepDefinitions;
 
+import java.util.Map;
+
 import org.testng.Assert;
 
 import com.pages.*;
@@ -44,13 +46,15 @@ public class MobileNoSignupStepDef {
 
 	@When("User enters invalid credentials in First name and Valid credentails for other fields from {string} and {int}")
 	public void user_enters_invalid_credentials_in_first_name_and_valid_credentails_for_other_fields_from_and(
-			String sheetName, Integer rowNumber) {
-		firstName = testContext.gUtil.getxlData(sheetName).get(rowNumber).get("First Name");
-		lastName = testContext.gUtil.getxlData(sheetName).get(rowNumber).get("Last Name");
-		number = testContext.gUtil.getxlData(sheetName).get(rowNumber).get("Mobile Number");
-		fieldValue = testContext.gUtil.getxlData(sheetName).get(rowNumber).get("Other Fields");
-		emailId = testContext.gUtil.getxlData(sheetName).get(rowNumber).get("Email Id");
-		passValue = testContext.gUtil.getxlData(sheetName).get(rowNumber).get("Password");
+			String sheetName, Integer rowNumber)
+	{ 
+		Map<String,String> xlvalue = testContext.gUtil.getxlData(sheetName).get(rowNumber);
+		firstName  = xlvalue.get("First Name");
+		lastName   = xlvalue.get("Last Name");
+		number     = xlvalue.get("Mobile Number");
+		fieldValue = xlvalue.get("Other Fields");
+		emailId    = xlvalue.get("Email Id");
+		passValue  = xlvalue.get("Password");
 
 		signupPage.mobileNoSignUp(firstName, lastName, number, fieldValue, passValue, emailId);
 
@@ -59,13 +63,13 @@ public class MobileNoSignupStepDef {
 	@When("User enters invalid credentials in Last name and Valid credentails for other fields from {string} and {int}")
 	public void user_enters_invalid_credentials_in_last_name_and_valid_credentails_for_other_fields_from_and(String sheetName, Integer rowNumber) {
 
-		firstName = testContext.gUtil.getxlData(sheetName).get(rowNumber).get("First Name");
-		lastName = testContext.gUtil.getxlData(sheetName).get(rowNumber).get("Last Name");
-		number = testContext.gUtil.getxlData(sheetName).get(rowNumber).get("Mobile Number");
-		fieldValue = testContext.gUtil.getxlData(sheetName).get(rowNumber).get("Other Fields");
-		emailId = testContext.gUtil.getxlData(sheetName).get(rowNumber).get("Email Id");
-		passValue = testContext.gUtil.getxlData(sheetName).get(rowNumber).get("Password");
-
+		Map<String,String> xlvalue = testContext.gUtil.getxlData(sheetName).get(rowNumber);
+		firstName	 = xlvalue.get("First Name");
+		lastName	 = xlvalue.get("Last Name");
+		number     = xlvalue.get("Mobile Number");
+		fieldValue = xlvalue.get("Other Fields");
+		emailId    = xlvalue.get("Email Id");
+		passValue  = xlvalue.get("Password");
 		signupPage.mobileNoSignUp(firstName, lastName, number, fieldValue, passValue, emailId);
 	}
 
@@ -73,12 +77,13 @@ public class MobileNoSignupStepDef {
 	public void user_enters_invalid_credentials_in_any_other_field_and_valid_credentails_for_names_email_password_from_and(String sheetName, Integer rowNumber) 
 	{
 
-		firstName = testContext.gUtil.getxlData(sheetName).get(rowNumber).get("First Name");
-		lastName = testContext.gUtil.getxlData(sheetName).get(rowNumber).get("Last Name");
-		number = testContext.gUtil.getxlData(sheetName).get(rowNumber).get("Mobile Number");
-		fieldValue = testContext.gUtil.getxlData(sheetName).get(rowNumber).get("Other Fields");
-		emailId = testContext.gUtil.getxlData(sheetName).get(rowNumber).get("Email Id");
-		passValue = testContext.gUtil.getxlData(sheetName).get(rowNumber).get("Password");
+		Map<String,String> xlvalue = testContext.gUtil.getxlData(sheetName).get(rowNumber);
+		firstName 	= xlvalue.get("First Name");
+		lastName	= xlvalue.get("Last Name");
+		number		= xlvalue.get("Mobile Number");
+		fieldValue  = xlvalue.get("Other Fields");
+		emailId     = xlvalue.get("Email Id");
+		passValue   = xlvalue.get("Password");
 
 		signupPage.mobileNoSignUp(firstName, lastName, number, fieldValue, passValue, emailId);
 	}
@@ -86,13 +91,13 @@ public class MobileNoSignupStepDef {
 	@When("User enters invalid credentials in Email and Valid credentails for other fields from {string} and {int}")
 	public void user_enters_invalid_credentials_in_email_and_valid_credentails_for_other_fields_from_and(String sheetName, Integer rowNumber) 
 	{
-		firstName = testContext.gUtil.getxlData(sheetName).get(rowNumber).get("First Name");
-		lastName = testContext.gUtil.getxlData(sheetName).get(rowNumber).get("Last Name");
-		number = testContext.gUtil.getxlData(sheetName).get(rowNumber).get("Mobile Number");
-		fieldValue = testContext.gUtil.getxlData(sheetName).get(rowNumber).get("Other Fields");
-		emailId = testContext.gUtil.getxlData(sheetName).get(rowNumber).get("Email Id");
-		passValue = testContext.gUtil.getxlData(sheetName).get(rowNumber).get("Password");
-
+		Map<String,String> xlvalue = testContext.gUtil.getxlData(sheetName).get(rowNumber);
+		firstName   = xlvalue.get("First Name");
+		lastName   = xlvalue.get("Last Name");
+		number     = xlvalue.get("Mobile Number");
+		fieldValue = xlvalue.get("Other Fields");
+		emailId    = xlvalue.get("Email Id");
+		passValue  = xlvalue.get("Password");
 		signupPage.mobileNoSignUp(firstName, lastName, number, fieldValue, passValue, emailId);
 
 	}
@@ -100,12 +105,13 @@ public class MobileNoSignupStepDef {
 	@When("User enters invalid credentials in Mobile Number and Valid credentails for other fields from {string} and {int}")
 	public void user_enters_invalid_credentials_in_mobile_number_and_valid_credentails_for_other_fields_from_and(String sheetName, Integer rowNumber) 
 	{
-		firstName = testContext.gUtil.getxlData(sheetName).get(rowNumber).get("First Name");
-		lastName = testContext.gUtil.getxlData(sheetName).get(rowNumber).get("Last Name");
-		number = testContext.gUtil.getxlData(sheetName).get(rowNumber).get("Mobile Number");
-		fieldValue = testContext.gUtil.getxlData(sheetName).get(rowNumber).get("Other Fields");
-		emailId = testContext.gUtil.getxlData(sheetName).get(rowNumber).get("Email Id");
-		passValue = testContext.gUtil.getxlData(sheetName).get(rowNumber).get("Password");
+		Map<String,String> xlvalue = testContext.gUtil.getxlData(sheetName).get(rowNumber);
+		firstName = xlvalue.get("First Name");
+		lastName = xlvalue.get("Last Name");
+		number = xlvalue.get("Mobile Number");
+		fieldValue = xlvalue.get("Other Fields");
+		emailId = xlvalue.get("Email Id");
+		passValue = xlvalue.get("Password");
 
 		signupPage.mobileNoSignUp(firstName, lastName, number, fieldValue, passValue, emailId);
 
@@ -114,12 +120,13 @@ public class MobileNoSignupStepDef {
 	@When("User enters invalid credentials in Password and Valid credentails for other fields from {string} and {int}")
 	public void user_enters_invalid_credentials_in_password_and_valid_credentails_for_other_fields_from_and(String sheetName, Integer rowNumber) 
 	{
-		firstName = testContext.gUtil.getxlData(sheetName).get(rowNumber).get("First Name");
-		lastName = testContext.gUtil.getxlData(sheetName).get(rowNumber).get("Last Name");
-		number = testContext.gUtil.getxlData(sheetName).get(rowNumber).get("Mobile Number");
-		fieldValue = testContext.gUtil.getxlData(sheetName).get(rowNumber).get("Other Fields");
-		emailId = testContext.gUtil.getxlData(sheetName).get(rowNumber).get("Email Id");
-		passValue = testContext.gUtil.getxlData(sheetName).get(rowNumber).get("Password");
+		Map<String,String> xlvalue = testContext.gUtil.getxlData(sheetName).get(rowNumber);
+		firstName   = xlvalue.get("First Name");
+		lastName    = xlvalue.get("Last Name");
+		number      = xlvalue.get("Mobile Number");
+		fieldValue  = xlvalue.get("Other Fields");
+		emailId     = xlvalue.get("Email Id");
+		passValue   = xlvalue.get("Password");
 
 		signupPage.mobileNoSignUp(firstName, lastName, number, fieldValue, passValue, emailId);
 
@@ -128,39 +135,40 @@ public class MobileNoSignupStepDef {
 	@When("User submit form without entering data {string} and {int}")
 	public void user_submit_form_without_entering_field_data(String sheetName, Integer rowNumber)
 	{
-		firstName = testContext.gUtil.getxlData(sheetName).get(rowNumber).get("First Name");
-		lastName = testContext.gUtil.getxlData(sheetName).get(rowNumber).get("Last Name");
-		number = testContext.gUtil.getxlData(sheetName).get(rowNumber).get("Mobile Number");
-		fieldValue = testContext.gUtil.getxlData(sheetName).get(rowNumber).get("Other Fields");
-		emailId = testContext.gUtil.getxlData(sheetName).get(rowNumber).get("Email Id");
-		passValue = testContext.gUtil.getxlData(sheetName).get(rowNumber).get("Password");
-
+		Map<String,String> xlvalue = testContext.gUtil.getxlData(sheetName).get(rowNumber);
+		firstName    = xlvalue.get("First Name");
+		lastName     = xlvalue.get("Last Name");
+		number       = xlvalue.get("Mobile Number");
+		fieldValue   = xlvalue.get("Other Fields");
+		emailId      = xlvalue.get("Email Id");
+		passValue    = xlvalue.get("Password");
 		signupPage.mobileNoSignUp(firstName, lastName, number, fieldValue, passValue, emailId);  
 	}
 	
 	@When("User enters  Valid credentails in all fields from {string} and {int}")
 	public void user_enters_valid_credentails_in_all_fields_from_and(String sheetName, Integer rowNumber) 
 	{
-		firstName = testContext.gUtil.getxlData(sheetName).get(rowNumber).get("First Name");
-		lastName = testContext.gUtil.getxlData(sheetName).get(rowNumber).get("Last Name");
-		number = testContext.gUtil.getxlData(sheetName).get(rowNumber).get("Mobile Number");
-		fieldValue = testContext.gUtil.getxlData(sheetName).get(rowNumber).get("Other Fields");
-		emailId = testContext.gUtil.getxlData(sheetName).get(rowNumber).get("Email Id");
-		passValue = testContext.gUtil.getxlData(sheetName).get(rowNumber).get("Password");
+		Map<String,String> xlvalue = testContext.gUtil.getxlData(sheetName).get(rowNumber);
+		firstName   = xlvalue.get("First Name");
+		lastName    = xlvalue.get("Last Name");
+		number      = xlvalue.get("Mobile Number");
+		fieldValue  = xlvalue.get("Other Fields");
+		emailId     = xlvalue.get("Email Id");
+		passValue   = xlvalue.get("Password");
 
 		signupPage.mobileNoSignUp(firstName, lastName, number, fieldValue, passValue, emailId);
 
 	}
 	
 	
-//	@Then("User should receive error message {string} and {int}")
-//	public void user_should_receive_error_message_and(String sheetName,Integer rowNumber) 
-//	{
-//	  actualErrorMessage = signupPage.getError();
-//      expectedErrorMessage = testContext.gUtil.getxlData(sheetName).get(rowNumber).get("Message");
-//      
-//      Assert.assertEquals(actualErrorMessage, expectedErrorMessage);
-//      
-//	}
+	@Then("User should receive error message from sheet {string} and {int}")
+	public void user_should_receive_error_message_from_sheet(String sheetName,Integer rowNumber) 
+	{
+	  actualErrorMessage = signupPage.getError();
+      expectedErrorMessage = testContext.gUtil.getxlData(sheetName).get(rowNumber).get("Message");
+      
+      Assert.assertEquals(actualErrorMessage, expectedErrorMessage);
+      
+	}
 
 }
