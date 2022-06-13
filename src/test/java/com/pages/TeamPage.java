@@ -8,13 +8,21 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class TeamPage {
+	
 	public WebDriver driver;
 	
-	@FindBy(xpath ="//span[@class='name']") List<WebElement> name;
-	@FindBy(xpath = "//div[@aria-label='Previous']") WebElement previousPage;
-	@FindBy(xpath = "//div[@aria-label='Next']") WebElement nextPage;
+	@FindBy(xpath ="//span[@class='name']") 
+	private List<WebElement> name;
+	
+	@FindBy(xpath = "//div[@aria-label='Previous']") 
+	private WebElement previousPage;
+	
+	@FindBy(xpath = "//div[@aria-label='Next']")
+	private WebElement nextPage;
+	
 	public TeamPage(WebDriver driver) 
 	{
+		this.driver = driver;
 		PageFactory.initElements(driver, this);
 
 	}
