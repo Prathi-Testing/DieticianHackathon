@@ -121,5 +121,10 @@ public class HomePage {
 	public Boolean getSigninVisibility() {
 		return signin.isDisplayed();
 	}
+	
+	public void clickSignin()
+	{
+		signin.click();
+	}
 
 }
