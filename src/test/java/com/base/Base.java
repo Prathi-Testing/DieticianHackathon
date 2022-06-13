@@ -38,6 +38,7 @@ public class Base {
 			launchBrowser();
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
 			driver.manage().window().maximize();
+			driver.manage().deleteAllCookies();
 			driver.get(url);
 			
 			

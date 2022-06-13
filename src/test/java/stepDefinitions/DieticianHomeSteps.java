@@ -23,7 +23,6 @@ public class DieticianHomeSteps {
 	
 	 @When("^User is on the Dietician Home page$")
 	    public void user_is_on_the_dietician_home_page(){
-		 	
 		 	Assert.assertEquals(dieticianHP.getTitle(), testContext.expectedDieticianHomePageTitle);
 	    }
 	 

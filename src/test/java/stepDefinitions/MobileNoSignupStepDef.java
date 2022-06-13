@@ -153,14 +153,14 @@ public class MobileNoSignupStepDef {
 	}
 	
 	
-	@Then("User should receive error message {string} and {int}")
-	public void user_should_receive_error_message_and(String sheetName,Integer rowNumber) 
-	{
-	  actualErrorMessage = signupPage.getError();
-      expectedErrorMessage = testContext.gUtil.getxlData(sheetName).get(rowNumber).get("Message");
-      
-      Assert.assertEquals(actualErrorMessage, expectedErrorMessage);
-      
-	}
+//	@Then("User should receive error message {string} and {int}")
+//	public void user_should_receive_error_message_and(String sheetName,Integer rowNumber) 
+//	{
+//	  actualErrorMessage = signupPage.getError();
+//      expectedErrorMessage = testContext.gUtil.getxlData(sheetName).get(rowNumber).get("Message");
+//      
+//      Assert.assertEquals(actualErrorMessage, expectedErrorMessage);
+//      
+//	}
 
 }
