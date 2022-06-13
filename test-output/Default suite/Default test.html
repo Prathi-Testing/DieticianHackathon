@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/11/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/22/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Jun 13 00:56:22 MST 2022</td>
+<td>Started on:</td><td>Mon Jun 13 11:15:38 MST 2022</td>
 </tr>
-<tr><td>Total time:</td><td>90 seconds (90105 ms)</td>
+<tr><td>Total time:</td><td>225 seconds (225683 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,268 +75,962 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='runner.TestNgRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNgRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Dietician Home Page After Login", "Dietician Home Page"</td>
-<td><div><pre>java.lang.AssertionError: expected [Dietician Home] but found [Dummy.com]
+<td title='runner.TestNgRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNgRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Postal code Field Wrong Data Format Validation", "Add New Patient Page"</td>
+<td><div><pre>java.lang.AssertionError: expected [New Patient] but found [Dummy.com]
 	at org.testng.Assert.fail(Assert.java:110)
 	at org.testng.Assert.failNotEquals(Assert.java:1413)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
 	at org.testng.Assert.assertEquals(Assert.java:131)
 	at org.testng.Assert.assertEquals(Assert.java:655)
 	at org.testng.Assert.assertEquals(Assert.java:665)
-	at stepDefinitions.DieticianHomeSteps.user_is_on_the_dietician_home_page(DieticianHomeSteps.java:26)
-	at ?.User is on the Dietician Home page(file:///C:/Users/einst/eclipse-workspace-new/DieticianHackathon/src/test/resources/features/DieticianHome.feature:5)
-</pre></div><a href='#' onClick='toggleBox("stack-trace905188932", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace905188932'><pre>java.lang.AssertionError: expected [Dietician Home] but found [Dummy.com]
+	at stepDefinitions.NewPatientSteps.user_is_on_the_add_new_patient_page(NewPatientSteps.java:37)
+	at ?.User is on the Add New Patient Page(file:///C:/Users/einst/eclipse-workspace-new/DieticianHackathon/src/test/resources/features/NewPatient.feature:100)
+</pre></div><a href='#' onClick='toggleBox("stack-trace656567906", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace656567906'><pre>java.lang.AssertionError: expected [New Patient] but found [Dummy.com]
 	at org.testng.Assert.fail(Assert.java:110)
 	at org.testng.Assert.failNotEquals(Assert.java:1413)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
 	at org.testng.Assert.assertEquals(Assert.java:131)
 	at org.testng.Assert.assertEquals(Assert.java:655)
 	at org.testng.Assert.assertEquals(Assert.java:665)
-	at stepDefinitions.DieticianHomeSteps.user_is_on_the_dietician_home_page(DieticianHomeSteps.java:26)
-	at ?.User is on the Dietician Home page(file:///C:/Users/einst/eclipse-workspace-new/DieticianHackathon/src/test/resources/features/DieticianHome.feature:5)
+	at stepDefinitions.NewPatientSteps.user_is_on_the_add_new_patient_page(NewPatientSteps.java:37)
+	at ?.User is on the Add New Patient Page(file:///C:/Users/einst/eclipse-workspace-new/DieticianHackathon/src/test/resources/features/NewPatient.feature:100)
+</pre></div></td>
+<td>54</td>
+<td>runner.TestNgRunner@5d0bf09b</td></tr>
+<tr>
+<td title='runner.TestNgRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNgRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: ""Full Name" Field Empty Value Validation", "Add New Patient Page"</td>
+<td><div><pre>java.lang.AssertionError: expected [New Patient] but found [Tomtop – Loving, Shopping, Sharing]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.testng.Assert.assertEquals(Assert.java:665)
+	at stepDefinitions.NewPatientSteps.user_is_on_the_add_new_patient_page(NewPatientSteps.java:37)
+	at ?.User is on the Add New Patient Page(file:///C:/Users/einst/eclipse-workspace-new/DieticianHackathon/src/test/resources/features/NewPatient.feature:28)
+</pre></div><a href='#' onClick='toggleBox("stack-trace2051544969", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2051544969'><pre>java.lang.AssertionError: expected [New Patient] but found [Tomtop – Loving, Shopping, Sharing]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.testng.Assert.assertEquals(Assert.java:665)
+	at stepDefinitions.NewPatientSteps.user_is_on_the_add_new_patient_page(NewPatientSteps.java:37)
+	at ?.User is on the Add New Patient Page(file:///C:/Users/einst/eclipse-workspace-new/DieticianHackathon/src/test/resources/features/NewPatient.feature:28)
+</pre></div></td>
+<td>85</td>
+<td>runner.TestNgRunner@5d0bf09b</td></tr>
+<tr>
+<td title='runner.TestNgRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNgRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: ""Phone number" special character validation", "Add New Patient Page"</td>
+<td><div><pre>java.lang.AssertionError: expected [New Patient] but found [Dummy.com]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.testng.Assert.assertEquals(Assert.java:665)
+	at stepDefinitions.NewPatientSteps.user_is_on_the_add_new_patient_page(NewPatientSteps.java:37)
+	at ?.User is on the Add New Patient Page(file:///C:/Users/einst/eclipse-workspace-new/DieticianHackathon/src/test/resources/features/NewPatient.feature:172)
+</pre></div><a href='#' onClick='toggleBox("stack-trace627231782", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace627231782'><pre>java.lang.AssertionError: expected [New Patient] but found [Dummy.com]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.testng.Assert.assertEquals(Assert.java:665)
+	at stepDefinitions.NewPatientSteps.user_is_on_the_add_new_patient_page(NewPatientSteps.java:37)
+	at ?.User is on the Add New Patient Page(file:///C:/Users/einst/eclipse-workspace-new/DieticianHackathon/src/test/resources/features/NewPatient.feature:172)
+</pre></div></td>
+<td>49</td>
+<td>runner.TestNgRunner@5d0bf09b</td></tr>
+<tr>
+<td title='runner.TestNgRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNgRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Email Field Empty Value Validation", "Add New Patient Page"</td>
+<td><div><pre>java.lang.AssertionError: expected [New Patient] but found [Dummy.com]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.testng.Assert.assertEquals(Assert.java:665)
+	at stepDefinitions.NewPatientSteps.user_is_on_the_add_new_patient_page(NewPatientSteps.java:37)
+	at ?.User is on the Add New Patient Page(file:///C:/Users/einst/eclipse-workspace-new/DieticianHackathon/src/test/resources/features/NewPatient.feature:109)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1447827337", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1447827337'><pre>java.lang.AssertionError: expected [New Patient] but found [Dummy.com]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.testng.Assert.assertEquals(Assert.java:665)
+	at stepDefinitions.NewPatientSteps.user_is_on_the_add_new_patient_page(NewPatientSteps.java:37)
+	at ?.User is on the Add New Patient Page(file:///C:/Users/einst/eclipse-workspace-new/DieticianHackathon/src/test/resources/features/NewPatient.feature:109)
+</pre></div></td>
+<td>39</td>
+<td>runner.TestNgRunner@5d0bf09b</td></tr>
+<tr>
+<td title='runner.TestNgRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNgRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: ""Postal code" Field Empty Value Validation", "Add New Patient Page"</td>
+<td><div><pre>java.lang.AssertionError: expected [New Patient] but found [Dummy.com]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.testng.Assert.assertEquals(Assert.java:665)
+	at stepDefinitions.NewPatientSteps.user_is_on_the_add_new_patient_page(NewPatientSteps.java:37)
+	at ?.User is on the Add New Patient Page(file:///C:/Users/einst/eclipse-workspace-new/DieticianHackathon/src/test/resources/features/NewPatient.feature:91)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1342277476", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1342277476'><pre>java.lang.AssertionError: expected [New Patient] but found [Dummy.com]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.testng.Assert.assertEquals(Assert.java:665)
+	at stepDefinitions.NewPatientSteps.user_is_on_the_add_new_patient_page(NewPatientSteps.java:37)
+	at ?.User is on the Add New Patient Page(file:///C:/Users/einst/eclipse-workspace-new/DieticianHackathon/src/test/resources/features/NewPatient.feature:91)
 </pre></div></td>
 <td>63</td>
 <td>runner.TestNgRunner@5d0bf09b</td></tr>
 <tr>
-<td title='runner.TestNgRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNgRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify My Patient Page After Login", "Dietician Home Page"</td>
-<td><div><pre>java.lang.AssertionError: expected [Dietician Home] but found [www.infosayz.com]
-	at org.testng.Assert.fail(Assert.java:110)
-	at org.testng.Assert.failNotEquals(Assert.java:1413)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
-	at org.testng.Assert.assertEquals(Assert.java:131)
-	at org.testng.Assert.assertEquals(Assert.java:655)
-	at org.testng.Assert.assertEquals(Assert.java:665)
-	at stepDefinitions.DieticianHomeSteps.user_is_on_the_dietician_home_page(DieticianHomeSteps.java:26)
-	at ?.User is on the Dietician Home page(file:///C:/Users/einst/eclipse-workspace-new/DieticianHackathon/src/test/resources/features/DieticianHome.feature:13)
-</pre></div><a href='#' onClick='toggleBox("stack-trace718130829", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace718130829'><pre>java.lang.AssertionError: expected [Dietician Home] but found [www.infosayz.com]
-	at org.testng.Assert.fail(Assert.java:110)
-	at org.testng.Assert.failNotEquals(Assert.java:1413)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
-	at org.testng.Assert.assertEquals(Assert.java:131)
-	at org.testng.Assert.assertEquals(Assert.java:655)
-	at org.testng.Assert.assertEquals(Assert.java:665)
-	at stepDefinitions.DieticianHomeSteps.user_is_on_the_dietician_home_page(DieticianHomeSteps.java:26)
-	at ?.User is on the Dietician Home page(file:///C:/Users/einst/eclipse-workspace-new/DieticianHackathon/src/test/resources/features/DieticianHome.feature:13)
+<td title='runner.TestNgRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNgRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Valid New Patient data submission", "Add New Patient Page"</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: unknown error: cannot determine loading status
+from target frame detached
+  (Session info: MicrosoftEdge=102.0.1245.39)
+Build info: version: &apos;4.1.4&apos;, revision: &apos;535d840ee2&apos;
+System info: host: &apos;LAPTOP-BADH85B6&apos;, ip: &apos;192.168.0.16&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.8&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [e702459ab34311acc7e128d2fd976e85, get {url=https://dummy.com}]
+Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 102.0.1245.39, javascriptEnabled: true, ms:edgeOptions: {debuggerAddress: localhost:52711}, msedge: {msedgedriverVersion: 102.0.1245.39 (14b303d1f780..., userDataDir: C:\Users\einst\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:52711/devtoo..., se:cdpVersion: 102.0.1245.39, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: e702459ab34311acc7e128d2fd976e85
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:567)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:330)
+	at com.base.Base.getWebDriver(Base.java:42)
+	at com.base.TestContext.&lt;init&gt;(TestContext.java:24)
+	at jdk.internal.reflect.GeneratedConstructorAccessor27.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.picocontainer.injectors.AbstractInjector.newInstance(AbstractInjector.java:145)
+	at org.picocontainer.injectors.ConstructorInjector$1.run(ConstructorInjector.java:342)
+	at org.picocontainer.injectors.AbstractInjector$ThreadLocalCyclicDependencyGuard.observe(AbstractInjector.java:270)
+	at org.picocontainer.injectors.ConstructorInjector.getComponentInstance(ConstructorInjector.java:364)
+	at org.picocontainer.injectors.AbstractInjectionFactory$LifecycleAdapter.getComponentInstance(AbstractInjectionFactory.java:56)
+	at org.picocontainer.behaviors.AbstractBehavior.getComponentInstance(AbstractBehavior.java:64)
+	at org.picocontainer.behaviors.Stored.getComponentInstance(Stored.java:91)
+	at org.picocontainer.DefaultPicoContainer.getInstance(DefaultPicoContainer.java:699)
+	at org.picocontainer.DefaultPicoContainer.getComponent(DefaultPicoContainer.java:647)
+	at org.picocontainer.DefaultPicoContainer.getComponent(DefaultPicoContainer.java:632)
+	at org.picocontainer.parameters.BasicComponentParameter$1.resolveInstance(BasicComponentParameter.java:118)
+	at org.picocontainer.parameters.ComponentParameter$1.resolveInstance(ComponentParameter.java:136)
+	at org.picocontainer.injectors.SingleMemberInjector.getParameter(SingleMemberInjector.java:78)
+	at org.picocontainer.injectors.ConstructorInjector$CtorAndAdapters.getParameterArguments(ConstructorInjector.java:309)
+	at org.picocontainer.injectors.ConstructorInjector$1.run(ConstructorInjector.java:335)
+	at org.picocontainer.injectors.AbstractInjector$ThreadLocalCyclicDependencyGuard.observe(AbstractInjector.java:270)
+	at org.picocontainer.injectors.ConstructorInjector.getComponentInstance(ConstructorInjector.java:364)
+	at org.picocontainer.injectors.AbstractInjectionFactory$LifecycleAdapter.getComponentInstance(AbstractInjectionFactory.java:56)
+	at org.picocontainer.behaviors.AbstractBehavior.getComponentInstance(AbstractBehavior.java:64)
+	at org.picocontainer.behaviors.Stored.getComponentInstance(Stored.java:91)
+	at org.picocontainer.DefaultPicoContainer.getInstance(DefaultPicoContainer.java:699)
+	at org.picocontainer.DefaultPicoContainer.getComponent(DefaultPicoContainer.java:647)
+	at org.picocontainer.DefaultPicoContainer.getComponent(DefaultPicoContainer.java:678)
+	at io.cucumber.picocontainer.PicoFactory.getInstance(PicoFactory.java:49)
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
+	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:85)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:57)
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:84)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:132)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:129)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:129)
+	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
+	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+	at jdk.internal.reflect.GeneratedMethodAccessor92.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:673)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:220)
+	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:80)
+	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:17)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1952175390", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1952175390'><pre>org.openqa.selenium.WebDriverException: unknown error: cannot determine loading status
+from target frame detached
+  (Session info: MicrosoftEdge=102.0.1245.39)
+Build info: version: &apos;4.1.4&apos;, revision: &apos;535d840ee2&apos;
+System info: host: &apos;LAPTOP-BADH85B6&apos;, ip: &apos;192.168.0.16&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.8&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [e702459ab34311acc7e128d2fd976e85, get {url=https://dummy.com}]
+Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 102.0.1245.39, javascriptEnabled: true, ms:edgeOptions: {debuggerAddress: localhost:52711}, msedge: {msedgedriverVersion: 102.0.1245.39 (14b303d1f780..., userDataDir: C:\Users\einst\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:52711/devtoo..., se:cdpVersion: 102.0.1245.39, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: e702459ab34311acc7e128d2fd976e85
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:567)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:330)
+	at com.base.Base.getWebDriver(Base.java:42)
+	at com.base.TestContext.&lt;init&gt;(TestContext.java:24)
+	at jdk.internal.reflect.GeneratedConstructorAccessor27.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.picocontainer.injectors.AbstractInjector.newInstance(AbstractInjector.java:145)
+	at org.picocontainer.injectors.ConstructorInjector$1.run(ConstructorInjector.java:342)
+	at org.picocontainer.injectors.AbstractInjector$ThreadLocalCyclicDependencyGuard.observe(AbstractInjector.java:270)
+	at org.picocontainer.injectors.ConstructorInjector.getComponentInstance(ConstructorInjector.java:364)
+	at org.picocontainer.injectors.AbstractInjectionFactory$LifecycleAdapter.getComponentInstance(AbstractInjectionFactory.java:56)
+	at org.picocontainer.behaviors.AbstractBehavior.getComponentInstance(AbstractBehavior.java:64)
+	at org.picocontainer.behaviors.Stored.getComponentInstance(Stored.java:91)
+	at org.picocontainer.DefaultPicoContainer.getInstance(DefaultPicoContainer.java:699)
+	at org.picocontainer.DefaultPicoContainer.getComponent(DefaultPicoContainer.java:647)
+	at org.picocontainer.DefaultPicoContainer.getComponent(DefaultPicoContainer.java:632)
+	at org.picocontainer.parameters.BasicComponentParameter$1.resolveInstance(BasicComponentParameter.java:118)
+	at org.picocontainer.parameters.ComponentParameter$1.resolveInstance(ComponentParameter.java:136)
+	at org.picocontainer.injectors.SingleMemberInjector.getParameter(SingleMemberInjector.java:78)
+	at org.picocontainer.injectors.ConstructorInjector$CtorAndAdapters.getParameterArguments(ConstructorInjector.java:309)
+	at org.picocontainer.injectors.ConstructorInjector$1.run(ConstructorInjector.java:335)
+	at org.picocontainer.injectors.AbstractInjector$ThreadLocalCyclicDependencyGuard.observe(AbstractInjector.java:270)
+	at org.picocontainer.injectors.ConstructorInjector.getComponentInstance(ConstructorInjector.java:364)
+	at org.picocontainer.injectors.AbstractInjectionFactory$LifecycleAdapter.getComponentInstance(AbstractInjectionFactory.java:56)
+	at org.picocontainer.behaviors.AbstractBehavior.getComponentInstance(AbstractBehavior.java:64)
+	at org.picocontainer.behaviors.Stored.getComponentInstance(Stored.java:91)
+	at org.picocontainer.DefaultPicoContainer.getInstance(DefaultPicoContainer.java:699)
+	at org.picocontainer.DefaultPicoContainer.getComponent(DefaultPicoContainer.java:647)
+	at org.picocontainer.DefaultPicoContainer.getComponent(DefaultPicoContainer.java:678)
+	at io.cucumber.picocontainer.PicoFactory.getInstance(PicoFactory.java:49)
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
+	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:85)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:57)
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:84)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:132)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:129)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:129)
+	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
+	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+	at jdk.internal.reflect.GeneratedMethodAccessor92.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:673)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:220)
+	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:80)
+	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:17)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
 </pre></div></td>
-<td>63</td>
+<td>75</td>
 <td>runner.TestNgRunner@5d0bf09b</td></tr>
 <tr>
-<td title='runner.TestNgRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNgRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Dietician Home Page "Logged in as Dietician name" message verification After Login", "Dietician Home Page"</td>
-<td><div><pre>java.lang.AssertionError: expected [Dietician Home] but found [www.infosayz.com]
+<td title='runner.TestNgRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNgRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Phone number Field Empty Value Validation", "Add New Patient Page"</td>
+<td><div><pre>java.lang.AssertionError: expected [New Patient] but found [Dummy.com]
 	at org.testng.Assert.fail(Assert.java:110)
 	at org.testng.Assert.failNotEquals(Assert.java:1413)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
 	at org.testng.Assert.assertEquals(Assert.java:131)
 	at org.testng.Assert.assertEquals(Assert.java:655)
 	at org.testng.Assert.assertEquals(Assert.java:665)
-	at stepDefinitions.DieticianHomeSteps.user_is_on_the_dietician_home_page(DieticianHomeSteps.java:26)
-	at ?.User is on the Dietician Home page(file:///C:/Users/einst/eclipse-workspace-new/DieticianHackathon/src/test/resources/features/DieticianHome.feature:40)
-</pre></div><a href='#' onClick='toggleBox("stack-trace213384384", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace213384384'><pre>java.lang.AssertionError: expected [Dietician Home] but found [www.infosayz.com]
+	at stepDefinitions.NewPatientSteps.user_is_on_the_add_new_patient_page(NewPatientSteps.java:37)
+	at ?.User is on the Add New Patient Page(file:///C:/Users/einst/eclipse-workspace-new/DieticianHackathon/src/test/resources/features/NewPatient.feature:136)
+</pre></div><a href='#' onClick='toggleBox("stack-trace301928633", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace301928633'><pre>java.lang.AssertionError: expected [New Patient] but found [Dummy.com]
 	at org.testng.Assert.fail(Assert.java:110)
 	at org.testng.Assert.failNotEquals(Assert.java:1413)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
 	at org.testng.Assert.assertEquals(Assert.java:131)
 	at org.testng.Assert.assertEquals(Assert.java:655)
 	at org.testng.Assert.assertEquals(Assert.java:665)
-	at stepDefinitions.DieticianHomeSteps.user_is_on_the_dietician_home_page(DieticianHomeSteps.java:26)
-	at ?.User is on the Dietician Home page(file:///C:/Users/einst/eclipse-workspace-new/DieticianHackathon/src/test/resources/features/DieticianHome.feature:40)
+	at stepDefinitions.NewPatientSteps.user_is_on_the_add_new_patient_page(NewPatientSteps.java:37)
+	at ?.User is on the Add New Patient Page(file:///C:/Users/einst/eclipse-workspace-new/DieticianHackathon/src/test/resources/features/NewPatient.feature:136)
 </pre></div></td>
-<td>65</td>
+<td>52</td>
 <td>runner.TestNgRunner@5d0bf09b</td></tr>
 <tr>
-<td title='runner.TestNgRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNgRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Clicking My Patient Page After Login", "Dietician Home Page"</td>
-<td><div><pre>java.lang.AssertionError: expected [Dietician Home] but found [Reported Unsafe Site: Navigation Blocked]
+<td title='runner.TestNgRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNgRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: ""Full Name" Field Numeric Value Validation", "Add New Patient Page"</td>
+<td><div><pre>java.lang.AssertionError: expected [New Patient] but found [Reported Unsafe Site: Navigation Blocked]
 	at org.testng.Assert.fail(Assert.java:110)
 	at org.testng.Assert.failNotEquals(Assert.java:1413)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
 	at org.testng.Assert.assertEquals(Assert.java:131)
 	at org.testng.Assert.assertEquals(Assert.java:655)
 	at org.testng.Assert.assertEquals(Assert.java:665)
-	at stepDefinitions.DieticianHomeSteps.user_is_on_the_dietician_home_page(DieticianHomeSteps.java:26)
-	at ?.User is on the Dietician Home page(file:///C:/Users/einst/eclipse-workspace-new/DieticianHackathon/src/test/resources/features/DieticianHome.feature:26)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1577279636", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1577279636'><pre>java.lang.AssertionError: expected [Dietician Home] but found [Reported Unsafe Site: Navigation Blocked]
+	at stepDefinitions.NewPatientSteps.user_is_on_the_add_new_patient_page(NewPatientSteps.java:37)
+	at ?.User is on the Add New Patient Page(file:///C:/Users/einst/eclipse-workspace-new/DieticianHackathon/src/test/resources/features/NewPatient.feature:19)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1525119008", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1525119008'><pre>java.lang.AssertionError: expected [New Patient] but found [Reported Unsafe Site: Navigation Blocked]
 	at org.testng.Assert.fail(Assert.java:110)
 	at org.testng.Assert.failNotEquals(Assert.java:1413)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
 	at org.testng.Assert.assertEquals(Assert.java:131)
 	at org.testng.Assert.assertEquals(Assert.java:655)
 	at org.testng.Assert.assertEquals(Assert.java:665)
-	at stepDefinitions.DieticianHomeSteps.user_is_on_the_dietician_home_page(DieticianHomeSteps.java:26)
-	at ?.User is on the Dietician Home page(file:///C:/Users/einst/eclipse-workspace-new/DieticianHackathon/src/test/resources/features/DieticianHome.feature:26)
+	at stepDefinitions.NewPatientSteps.user_is_on_the_add_new_patient_page(NewPatientSteps.java:37)
+	at ?.User is on the Add New Patient Page(file:///C:/Users/einst/eclipse-workspace-new/DieticianHackathon/src/test/resources/features/NewPatient.feature:19)
 </pre></div></td>
-<td>67</td>
+<td>85</td>
 <td>runner.TestNgRunner@5d0bf09b</td></tr>
 <tr>
-<td title='runner.TestNgRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNgRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Dietician Home Page SIGN OUT After Login", "Dietician Home Page"</td>
-<td><div><pre>java.lang.AssertionError: expected [Dietician Home] but found [www.infosayz.com]
+<td title='runner.TestNgRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNgRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: ""Addess line 1" Field Empty Value Validation", "Add New Patient Page"</td>
+<td><div><pre>java.lang.AssertionError: expected [New Patient] but found [Dummy.com]
 	at org.testng.Assert.fail(Assert.java:110)
 	at org.testng.Assert.failNotEquals(Assert.java:1413)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
 	at org.testng.Assert.assertEquals(Assert.java:131)
 	at org.testng.Assert.assertEquals(Assert.java:655)
 	at org.testng.Assert.assertEquals(Assert.java:665)
-	at stepDefinitions.DieticianHomeSteps.user_is_on_the_dietician_home_page(DieticianHomeSteps.java:26)
-	at ?.User is on the Dietician Home page(file:///C:/Users/einst/eclipse-workspace-new/DieticianHackathon/src/test/resources/features/DieticianHome.feature:48)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1516686350", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1516686350'><pre>java.lang.AssertionError: expected [Dietician Home] but found [www.infosayz.com]
+	at stepDefinitions.NewPatientSteps.user_is_on_the_add_new_patient_page(NewPatientSteps.java:37)
+	at ?.User is on the Add New Patient Page(file:///C:/Users/einst/eclipse-workspace-new/DieticianHackathon/src/test/resources/features/NewPatient.feature:37)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1353703233", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1353703233'><pre>java.lang.AssertionError: expected [New Patient] but found [Dummy.com]
 	at org.testng.Assert.fail(Assert.java:110)
 	at org.testng.Assert.failNotEquals(Assert.java:1413)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
 	at org.testng.Assert.assertEquals(Assert.java:131)
 	at org.testng.Assert.assertEquals(Assert.java:655)
 	at org.testng.Assert.assertEquals(Assert.java:665)
-	at stepDefinitions.DieticianHomeSteps.user_is_on_the_dietician_home_page(DieticianHomeSteps.java:26)
-	at ?.User is on the Dietician Home page(file:///C:/Users/einst/eclipse-workspace-new/DieticianHackathon/src/test/resources/features/DieticianHome.feature:48)
+	at stepDefinitions.NewPatientSteps.user_is_on_the_add_new_patient_page(NewPatientSteps.java:37)
+	at ?.User is on the Add New Patient Page(file:///C:/Users/einst/eclipse-workspace-new/DieticianHackathon/src/test/resources/features/NewPatient.feature:37)
 </pre></div></td>
-<td>23</td>
+<td>83</td>
 <td>runner.TestNgRunner@5d0bf09b</td></tr>
 <tr>
-<td title='runner.TestNgRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNgRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Diet Plans Page After Login", "Dietician Home Page"</td>
-<td><div><pre>java.lang.AssertionError: expected [Dietician Home] but found [Dummy.com]
+<td title='runner.TestNgRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNgRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: ""Country" Field Empty Value Validation", "Add New Patient Page"</td>
+<td><div><pre>java.lang.AssertionError: expected [New Patient] but found [www.infosayz.com]
 	at org.testng.Assert.fail(Assert.java:110)
 	at org.testng.Assert.failNotEquals(Assert.java:1413)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
 	at org.testng.Assert.assertEquals(Assert.java:131)
 	at org.testng.Assert.assertEquals(Assert.java:655)
 	at org.testng.Assert.assertEquals(Assert.java:665)
-	at stepDefinitions.DieticianHomeSteps.user_is_on_the_dietician_home_page(DieticianHomeSteps.java:26)
-	at ?.User is on the Dietician Home page(file:///C:/Users/einst/eclipse-workspace-new/DieticianHackathon/src/test/resources/features/DieticianHome.feature:17)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1104082599", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1104082599'><pre>java.lang.AssertionError: expected [Dietician Home] but found [Dummy.com]
+	at stepDefinitions.NewPatientSteps.user_is_on_the_add_new_patient_page(NewPatientSteps.java:37)
+	at ?.User is on the Add New Patient Page(file:///C:/Users/einst/eclipse-workspace-new/DieticianHackathon/src/test/resources/features/NewPatient.feature:46)
+</pre></div><a href='#' onClick='toggleBox("stack-trace215978577", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace215978577'><pre>java.lang.AssertionError: expected [New Patient] but found [www.infosayz.com]
 	at org.testng.Assert.fail(Assert.java:110)
 	at org.testng.Assert.failNotEquals(Assert.java:1413)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
 	at org.testng.Assert.assertEquals(Assert.java:131)
 	at org.testng.Assert.assertEquals(Assert.java:655)
 	at org.testng.Assert.assertEquals(Assert.java:665)
-	at stepDefinitions.DieticianHomeSteps.user_is_on_the_dietician_home_page(DieticianHomeSteps.java:26)
-	at ?.User is on the Dietician Home page(file:///C:/Users/einst/eclipse-workspace-new/DieticianHackathon/src/test/resources/features/DieticianHome.feature:17)
+	at stepDefinitions.NewPatientSteps.user_is_on_the_add_new_patient_page(NewPatientSteps.java:37)
+	at ?.User is on the Add New Patient Page(file:///C:/Users/einst/eclipse-workspace-new/DieticianHackathon/src/test/resources/features/NewPatient.feature:46)
 </pre></div></td>
-<td>65</td>
+<td>87</td>
 <td>runner.TestNgRunner@5d0bf09b</td></tr>
 <tr>
-<td title='runner.TestNgRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNgRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Clicking Diet Plans Page After Login", "Dietician Home Page"</td>
-<td><div><pre>java.lang.AssertionError: expected [Dietician Home] but found [Dummy.com]
-	at org.testng.Assert.fail(Assert.java:110)
-	at org.testng.Assert.failNotEquals(Assert.java:1413)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
-	at org.testng.Assert.assertEquals(Assert.java:131)
-	at org.testng.Assert.assertEquals(Assert.java:655)
-	at org.testng.Assert.assertEquals(Assert.java:665)
-	at stepDefinitions.DieticianHomeSteps.user_is_on_the_dietician_home_page(DieticianHomeSteps.java:26)
-	at ?.User is on the Dietician Home page(file:///C:/Users/einst/eclipse-workspace-new/DieticianHackathon/src/test/resources/features/DieticianHome.feature:31)
-</pre></div><a href='#' onClick='toggleBox("stack-trace914790924", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace914790924'><pre>java.lang.AssertionError: expected [Dietician Home] but found [Dummy.com]
-	at org.testng.Assert.fail(Assert.java:110)
-	at org.testng.Assert.failNotEquals(Assert.java:1413)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
-	at org.testng.Assert.assertEquals(Assert.java:131)
-	at org.testng.Assert.assertEquals(Assert.java:655)
-	at org.testng.Assert.assertEquals(Assert.java:665)
-	at stepDefinitions.DieticianHomeSteps.user_is_on_the_dietician_home_page(DieticianHomeSteps.java:26)
-	at ?.User is on the Dietician Home page(file:///C:/Users/einst/eclipse-workspace-new/DieticianHackathon/src/test/resources/features/DieticianHome.feature:31)
+<td title='runner.TestNgRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNgRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Empty Form submission For Add New Patient Details", "Add New Patient Page"</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: unknown error: net::ERR_CONNECTION_TIMED_OUT
+  (Session info: MicrosoftEdge=102.0.1245.39)
+Build info: version: &apos;4.1.4&apos;, revision: &apos;535d840ee2&apos;
+System info: host: &apos;LAPTOP-BADH85B6&apos;, ip: &apos;192.168.0.16&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.8&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [899ceb1ca7c96628f763d774a87c5627, get {url=https://dummy.com}]
+Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 102.0.1245.39, javascriptEnabled: true, ms:edgeOptions: {debuggerAddress: localhost:52796}, msedge: {msedgedriverVersion: 102.0.1245.39 (14b303d1f780..., userDataDir: C:\Users\einst\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:52796/devtoo..., se:cdpVersion: 102.0.1245.39, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 899ceb1ca7c96628f763d774a87c5627
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:567)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:330)
+	at com.base.Base.getWebDriver(Base.java:42)
+	at com.base.TestContext.&lt;init&gt;(TestContext.java:24)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.picocontainer.injectors.AbstractInjector.newInstance(AbstractInjector.java:145)
+	at org.picocontainer.injectors.ConstructorInjector$1.run(ConstructorInjector.java:342)
+	at org.picocontainer.injectors.AbstractInjector$ThreadLocalCyclicDependencyGuard.observe(AbstractInjector.java:270)
+	at org.picocontainer.injectors.ConstructorInjector.getComponentInstance(ConstructorInjector.java:364)
+	at org.picocontainer.injectors.AbstractInjectionFactory$LifecycleAdapter.getComponentInstance(AbstractInjectionFactory.java:56)
+	at org.picocontainer.behaviors.AbstractBehavior.getComponentInstance(AbstractBehavior.java:64)
+	at org.picocontainer.behaviors.Stored.getComponentInstance(Stored.java:91)
+	at org.picocontainer.DefaultPicoContainer.getInstance(DefaultPicoContainer.java:699)
+	at org.picocontainer.DefaultPicoContainer.getComponent(DefaultPicoContainer.java:647)
+	at org.picocontainer.DefaultPicoContainer.getComponent(DefaultPicoContainer.java:632)
+	at org.picocontainer.parameters.BasicComponentParameter$1.resolveInstance(BasicComponentParameter.java:118)
+	at org.picocontainer.parameters.ComponentParameter$1.resolveInstance(ComponentParameter.java:136)
+	at org.picocontainer.injectors.SingleMemberInjector.getParameter(SingleMemberInjector.java:78)
+	at org.picocontainer.injectors.ConstructorInjector$CtorAndAdapters.getParameterArguments(ConstructorInjector.java:309)
+	at org.picocontainer.injectors.ConstructorInjector$1.run(ConstructorInjector.java:335)
+	at org.picocontainer.injectors.AbstractInjector$ThreadLocalCyclicDependencyGuard.observe(AbstractInjector.java:270)
+	at org.picocontainer.injectors.ConstructorInjector.getComponentInstance(ConstructorInjector.java:364)
+	at org.picocontainer.injectors.AbstractInjectionFactory$LifecycleAdapter.getComponentInstance(AbstractInjectionFactory.java:56)
+	at org.picocontainer.behaviors.AbstractBehavior.getComponentInstance(AbstractBehavior.java:64)
+	at org.picocontainer.behaviors.Stored.getComponentInstance(Stored.java:91)
+	at org.picocontainer.DefaultPicoContainer.getInstance(DefaultPicoContainer.java:699)
+	at org.picocontainer.DefaultPicoContainer.getComponent(DefaultPicoContainer.java:647)
+	at org.picocontainer.DefaultPicoContainer.getComponent(DefaultPicoContainer.java:678)
+	at io.cucumber.picocontainer.PicoFactory.getInstance(PicoFactory.java:49)
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
+	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:85)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:57)
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:84)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:132)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:129)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:129)
+	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
+	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:673)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:220)
+	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:80)
+	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:17)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+</pre></div><a href='#' onClick='toggleBox("stack-trace795636477", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace795636477'><pre>org.openqa.selenium.WebDriverException: unknown error: net::ERR_CONNECTION_TIMED_OUT
+  (Session info: MicrosoftEdge=102.0.1245.39)
+Build info: version: &apos;4.1.4&apos;, revision: &apos;535d840ee2&apos;
+System info: host: &apos;LAPTOP-BADH85B6&apos;, ip: &apos;192.168.0.16&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.8&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [899ceb1ca7c96628f763d774a87c5627, get {url=https://dummy.com}]
+Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 102.0.1245.39, javascriptEnabled: true, ms:edgeOptions: {debuggerAddress: localhost:52796}, msedge: {msedgedriverVersion: 102.0.1245.39 (14b303d1f780..., userDataDir: C:\Users\einst\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:52796/devtoo..., se:cdpVersion: 102.0.1245.39, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 899ceb1ca7c96628f763d774a87c5627
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:567)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:330)
+	at com.base.Base.getWebDriver(Base.java:42)
+	at com.base.TestContext.&lt;init&gt;(TestContext.java:24)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.picocontainer.injectors.AbstractInjector.newInstance(AbstractInjector.java:145)
+	at org.picocontainer.injectors.ConstructorInjector$1.run(ConstructorInjector.java:342)
+	at org.picocontainer.injectors.AbstractInjector$ThreadLocalCyclicDependencyGuard.observe(AbstractInjector.java:270)
+	at org.picocontainer.injectors.ConstructorInjector.getComponentInstance(ConstructorInjector.java:364)
+	at org.picocontainer.injectors.AbstractInjectionFactory$LifecycleAdapter.getComponentInstance(AbstractInjectionFactory.java:56)
+	at org.picocontainer.behaviors.AbstractBehavior.getComponentInstance(AbstractBehavior.java:64)
+	at org.picocontainer.behaviors.Stored.getComponentInstance(Stored.java:91)
+	at org.picocontainer.DefaultPicoContainer.getInstance(DefaultPicoContainer.java:699)
+	at org.picocontainer.DefaultPicoContainer.getComponent(DefaultPicoContainer.java:647)
+	at org.picocontainer.DefaultPicoContainer.getComponent(DefaultPicoContainer.java:632)
+	at org.picocontainer.parameters.BasicComponentParameter$1.resolveInstance(BasicComponentParameter.java:118)
+	at org.picocontainer.parameters.ComponentParameter$1.resolveInstance(ComponentParameter.java:136)
+	at org.picocontainer.injectors.SingleMemberInjector.getParameter(SingleMemberInjector.java:78)
+	at org.picocontainer.injectors.ConstructorInjector$CtorAndAdapters.getParameterArguments(ConstructorInjector.java:309)
+	at org.picocontainer.injectors.ConstructorInjector$1.run(ConstructorInjector.java:335)
+	at org.picocontainer.injectors.AbstractInjector$ThreadLocalCyclicDependencyGuard.observe(AbstractInjector.java:270)
+	at org.picocontainer.injectors.ConstructorInjector.getComponentInstance(ConstructorInjector.java:364)
+	at org.picocontainer.injectors.AbstractInjectionFactory$LifecycleAdapter.getComponentInstance(AbstractInjectionFactory.java:56)
+	at org.picocontainer.behaviors.AbstractBehavior.getComponentInstance(AbstractBehavior.java:64)
+	at org.picocontainer.behaviors.Stored.getComponentInstance(Stored.java:91)
+	at org.picocontainer.DefaultPicoContainer.getInstance(DefaultPicoContainer.java:699)
+	at org.picocontainer.DefaultPicoContainer.getComponent(DefaultPicoContainer.java:647)
+	at org.picocontainer.DefaultPicoContainer.getComponent(DefaultPicoContainer.java:678)
+	at io.cucumber.picocontainer.PicoFactory.getInstance(PicoFactory.java:49)
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
+	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:85)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:57)
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:84)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:132)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:129)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:129)
+	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
+	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:673)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:220)
+	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:80)
+	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:17)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
 </pre></div></td>
-<td>64</td>
+<td>159</td>
 <td>runner.TestNgRunner@5d0bf09b</td></tr>
 <tr>
-<td title='runner.TestNgRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNgRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Dietician Home Page Side Bar After Login", "Dietician Home Page"</td>
-<td><div><pre>java.lang.AssertionError: expected [Dietician Home] but found [Dummy.com]
+<td title='runner.TestNgRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNgRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "City Field Empty Value Validation", "Add New Patient Page"</td>
+<td><div><pre>java.lang.AssertionError: expected [New Patient] but found [/ Pirated_Activation_code_detected_0xRed0xx786xx999y_cu5tomer_s5upport]
 	at org.testng.Assert.fail(Assert.java:110)
 	at org.testng.Assert.failNotEquals(Assert.java:1413)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
 	at org.testng.Assert.assertEquals(Assert.java:131)
 	at org.testng.Assert.assertEquals(Assert.java:655)
 	at org.testng.Assert.assertEquals(Assert.java:665)
-	at stepDefinitions.DieticianHomeSteps.user_is_on_the_dietician_home_page(DieticianHomeSteps.java:26)
-	at ?.User is on the Dietician Home page(file:///C:/Users/einst/eclipse-workspace-new/DieticianHackathon/src/test/resources/features/DieticianHome.feature:36)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1807018831", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1807018831'><pre>java.lang.AssertionError: expected [Dietician Home] but found [Dummy.com]
+	at stepDefinitions.NewPatientSteps.user_is_on_the_add_new_patient_page(NewPatientSteps.java:37)
+	at ?.User is on the Add New Patient Page(file:///C:/Users/einst/eclipse-workspace-new/DieticianHackathon/src/test/resources/features/NewPatient.feature:64)
+</pre></div><a href='#' onClick='toggleBox("stack-trace23216177", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace23216177'><pre>java.lang.AssertionError: expected [New Patient] but found [/ Pirated_Activation_code_detected_0xRed0xx786xx999y_cu5tomer_s5upport]
 	at org.testng.Assert.fail(Assert.java:110)
 	at org.testng.Assert.failNotEquals(Assert.java:1413)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
 	at org.testng.Assert.assertEquals(Assert.java:131)
 	at org.testng.Assert.assertEquals(Assert.java:655)
 	at org.testng.Assert.assertEquals(Assert.java:665)
-	at stepDefinitions.DieticianHomeSteps.user_is_on_the_dietician_home_page(DieticianHomeSteps.java:26)
-	at ?.User is on the Dietician Home page(file:///C:/Users/einst/eclipse-workspace-new/DieticianHackathon/src/test/resources/features/DieticianHome.feature:36)
+	at stepDefinitions.NewPatientSteps.user_is_on_the_add_new_patient_page(NewPatientSteps.java:37)
+	at ?.User is on the Add New Patient Page(file:///C:/Users/einst/eclipse-workspace-new/DieticianHackathon/src/test/resources/features/NewPatient.feature:64)
 </pre></div></td>
-<td>64</td>
+<td>83</td>
 <td>runner.TestNgRunner@5d0bf09b</td></tr>
 <tr>
-<td title='runner.TestNgRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNgRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Dietician Home Page Content After Login", "Dietician Home Page"</td>
-<td><div><pre>java.lang.AssertionError: expected [Dietician Home] but found [Dummy.com]
+<td title='runner.TestNgRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNgRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Phone number boundary value less then 10 digits", "Add New Patient Page"</td>
+<td><div><pre>java.lang.AssertionError: expected [New Patient] but found [Dummy.com]
 	at org.testng.Assert.fail(Assert.java:110)
 	at org.testng.Assert.failNotEquals(Assert.java:1413)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
 	at org.testng.Assert.assertEquals(Assert.java:131)
 	at org.testng.Assert.assertEquals(Assert.java:655)
 	at org.testng.Assert.assertEquals(Assert.java:665)
-	at stepDefinitions.DieticianHomeSteps.user_is_on_the_dietician_home_page(DieticianHomeSteps.java:26)
-	at ?.User is on the Dietician Home page(file:///C:/Users/einst/eclipse-workspace-new/DieticianHackathon/src/test/resources/features/DieticianHome.feature:44)
-</pre></div><a href='#' onClick='toggleBox("stack-trace2048079999", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace2048079999'><pre>java.lang.AssertionError: expected [Dietician Home] but found [Dummy.com]
+	at stepDefinitions.NewPatientSteps.user_is_on_the_add_new_patient_page(NewPatientSteps.java:37)
+	at ?.User is on the Add New Patient Page(file:///C:/Users/einst/eclipse-workspace-new/DieticianHackathon/src/test/resources/features/NewPatient.feature:154)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1172084553", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1172084553'><pre>java.lang.AssertionError: expected [New Patient] but found [Dummy.com]
 	at org.testng.Assert.fail(Assert.java:110)
 	at org.testng.Assert.failNotEquals(Assert.java:1413)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
 	at org.testng.Assert.assertEquals(Assert.java:131)
 	at org.testng.Assert.assertEquals(Assert.java:655)
 	at org.testng.Assert.assertEquals(Assert.java:665)
-	at stepDefinitions.DieticianHomeSteps.user_is_on_the_dietician_home_page(DieticianHomeSteps.java:26)
-	at ?.User is on the Dietician Home page(file:///C:/Users/einst/eclipse-workspace-new/DieticianHackathon/src/test/resources/features/DieticianHome.feature:44)
+	at stepDefinitions.NewPatientSteps.user_is_on_the_add_new_patient_page(NewPatientSteps.java:37)
+	at ?.User is on the Add New Patient Page(file:///C:/Users/einst/eclipse-workspace-new/DieticianHackathon/src/test/resources/features/NewPatient.feature:154)
 </pre></div></td>
-<td>65</td>
+<td>48</td>
 <td>runner.TestNgRunner@5d0bf09b</td></tr>
 <tr>
-<td title='runner.TestNgRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNgRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Clicking New Patient Page After Login", "Dietician Home Page"</td>
-<td><div><pre>java.lang.AssertionError: expected [Dietician Home] but found [Dummy.com]
+<td title='runner.TestNgRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNgRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "State, province or region Field Numeric Value Validation", "Add New Patient Page"</td>
+<td><div><pre>java.lang.AssertionError: expected [New Patient] but found [Dummy.com]
 	at org.testng.Assert.fail(Assert.java:110)
 	at org.testng.Assert.failNotEquals(Assert.java:1413)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
 	at org.testng.Assert.assertEquals(Assert.java:131)
 	at org.testng.Assert.assertEquals(Assert.java:655)
 	at org.testng.Assert.assertEquals(Assert.java:665)
-	at stepDefinitions.DieticianHomeSteps.user_is_on_the_dietician_home_page(DieticianHomeSteps.java:26)
-	at ?.User is on the Dietician Home page(file:///C:/Users/einst/eclipse-workspace-new/DieticianHackathon/src/test/resources/features/DieticianHome.feature:21)
-</pre></div><a href='#' onClick='toggleBox("stack-trace953750469", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace953750469'><pre>java.lang.AssertionError: expected [Dietician Home] but found [Dummy.com]
+	at stepDefinitions.NewPatientSteps.user_is_on_the_add_new_patient_page(NewPatientSteps.java:37)
+	at ?.User is on the Add New Patient Page(file:///C:/Users/einst/eclipse-workspace-new/DieticianHackathon/src/test/resources/features/NewPatient.feature:73)
+</pre></div><a href='#' onClick='toggleBox("stack-trace997699201", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace997699201'><pre>java.lang.AssertionError: expected [New Patient] but found [Dummy.com]
 	at org.testng.Assert.fail(Assert.java:110)
 	at org.testng.Assert.failNotEquals(Assert.java:1413)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
 	at org.testng.Assert.assertEquals(Assert.java:131)
 	at org.testng.Assert.assertEquals(Assert.java:655)
 	at org.testng.Assert.assertEquals(Assert.java:665)
-	at stepDefinitions.DieticianHomeSteps.user_is_on_the_dietician_home_page(DieticianHomeSteps.java:26)
-	at ?.User is on the Dietician Home page(file:///C:/Users/einst/eclipse-workspace-new/DieticianHackathon/src/test/resources/features/DieticianHome.feature:21)
+	at stepDefinitions.NewPatientSteps.user_is_on_the_add_new_patient_page(NewPatientSteps.java:37)
+	at ?.User is on the Add New Patient Page(file:///C:/Users/einst/eclipse-workspace-new/DieticianHackathon/src/test/resources/features/NewPatient.feature:73)
 </pre></div></td>
-<td>70</td>
+<td>107</td>
 <td>runner.TestNgRunner@5d0bf09b</td></tr>
 <tr>
-<td title='runner.TestNgRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNgRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify New Patient Page After Login", "Dietician Home Page"</td>
-<td><div><pre>java.lang.AssertionError: expected [Dietician Home] but found [Dummy.com]
+<td title='runner.TestNgRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNgRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Email Field Wrong Data Fomat Validation", "Add New Patient Page"</td>
+<td><div><pre>java.lang.AssertionError: expected [New Patient] but found [www.infosayz.com]
 	at org.testng.Assert.fail(Assert.java:110)
 	at org.testng.Assert.failNotEquals(Assert.java:1413)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
 	at org.testng.Assert.assertEquals(Assert.java:131)
 	at org.testng.Assert.assertEquals(Assert.java:655)
 	at org.testng.Assert.assertEquals(Assert.java:665)
-	at stepDefinitions.DieticianHomeSteps.user_is_on_the_dietician_home_page(DieticianHomeSteps.java:26)
-	at ?.User is on the Dietician Home page(file:///C:/Users/einst/eclipse-workspace-new/DieticianHackathon/src/test/resources/features/DieticianHome.feature:9)
-</pre></div><a href='#' onClick='toggleBox("stack-trace996221532", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace996221532'><pre>java.lang.AssertionError: expected [Dietician Home] but found [Dummy.com]
+	at stepDefinitions.NewPatientSteps.user_is_on_the_add_new_patient_page(NewPatientSteps.java:37)
+	at ?.User is on the Add New Patient Page(file:///C:/Users/einst/eclipse-workspace-new/DieticianHackathon/src/test/resources/features/NewPatient.feature:118)
+</pre></div><a href='#' onClick='toggleBox("stack-trace316500971", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace316500971'><pre>java.lang.AssertionError: expected [New Patient] but found [www.infosayz.com]
 	at org.testng.Assert.fail(Assert.java:110)
 	at org.testng.Assert.failNotEquals(Assert.java:1413)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
 	at org.testng.Assert.assertEquals(Assert.java:131)
 	at org.testng.Assert.assertEquals(Assert.java:655)
 	at org.testng.Assert.assertEquals(Assert.java:665)
-	at stepDefinitions.DieticianHomeSteps.user_is_on_the_dietician_home_page(DieticianHomeSteps.java:26)
-	at ?.User is on the Dietician Home page(file:///C:/Users/einst/eclipse-workspace-new/DieticianHackathon/src/test/resources/features/DieticianHome.feature:9)
+	at stepDefinitions.NewPatientSteps.user_is_on_the_add_new_patient_page(NewPatientSteps.java:37)
+	at ?.User is on the Add New Patient Page(file:///C:/Users/einst/eclipse-workspace-new/DieticianHackathon/src/test/resources/features/NewPatient.feature:118)
 </pre></div></td>
-<td>62</td>
+<td>72</td>
+<td>runner.TestNgRunner@5d0bf09b</td></tr>
+<tr>
+<td title='runner.TestNgRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNgRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: ""Phone number " boundary value more then 10 digits", "Add New Patient Page"</td>
+<td><div><pre>java.lang.AssertionError: expected [New Patient] but found [Dummy.com]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.testng.Assert.assertEquals(Assert.java:665)
+	at stepDefinitions.NewPatientSteps.user_is_on_the_add_new_patient_page(NewPatientSteps.java:37)
+	at ?.User is on the Add New Patient Page(file:///C:/Users/einst/eclipse-workspace-new/DieticianHackathon/src/test/resources/features/NewPatient.feature:163)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1365205161", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1365205161'><pre>java.lang.AssertionError: expected [New Patient] but found [Dummy.com]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.testng.Assert.assertEquals(Assert.java:665)
+	at stepDefinitions.NewPatientSteps.user_is_on_the_add_new_patient_page(NewPatientSteps.java:37)
+	at ?.User is on the Add New Patient Page(file:///C:/Users/einst/eclipse-workspace-new/DieticianHackathon/src/test/resources/features/NewPatient.feature:163)
+</pre></div></td>
+<td>49</td>
+<td>runner.TestNgRunner@5d0bf09b</td></tr>
+<tr>
+<td title='runner.TestNgRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNgRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Inserting Valid New Patient data submission", "Add New Patient Page"</td>
+<td><div><pre>java.lang.AssertionError: expected [New Patient] but found [Dummy.com]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.testng.Assert.assertEquals(Assert.java:665)
+	at stepDefinitions.NewPatientSteps.user_is_on_the_add_new_patient_page(NewPatientSteps.java:37)
+	at ?.User is on the Add New Patient Page(file:///C:/Users/einst/eclipse-workspace-new/DieticianHackathon/src/test/resources/features/NewPatient.feature:181)
+</pre></div><a href='#' onClick='toggleBox("stack-trace290045278", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace290045278'><pre>java.lang.AssertionError: expected [New Patient] but found [Dummy.com]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.testng.Assert.assertEquals(Assert.java:665)
+	at stepDefinitions.NewPatientSteps.user_is_on_the_add_new_patient_page(NewPatientSteps.java:37)
+	at ?.User is on the Add New Patient Page(file:///C:/Users/einst/eclipse-workspace-new/DieticianHackathon/src/test/resources/features/NewPatient.feature:181)
+</pre></div></td>
+<td>45</td>
+<td>runner.TestNgRunner@5d0bf09b</td></tr>
+<tr>
+<td title='runner.TestNgRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNgRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "State, province or region Field Empty Value Validation", "Add New Patient Page"</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: unknown error: net::ERR_CONNECTION_TIMED_OUT
+  (Session info: MicrosoftEdge=102.0.1245.39)
+Build info: version: &apos;4.1.4&apos;, revision: &apos;535d840ee2&apos;
+System info: host: &apos;LAPTOP-BADH85B6&apos;, ip: &apos;192.168.0.16&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.8&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [87eb1edbe99a5ab0c9817e6e3332d229, get {url=https://dummy.com}]
+Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 102.0.1245.39, javascriptEnabled: true, ms:edgeOptions: {debuggerAddress: localhost:52824}, msedge: {msedgedriverVersion: 102.0.1245.39 (14b303d1f780..., userDataDir: C:\Users\einst\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:52824/devtoo..., se:cdpVersion: 102.0.1245.39, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 87eb1edbe99a5ab0c9817e6e3332d229
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:567)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:330)
+	at com.base.Base.getWebDriver(Base.java:42)
+	at com.base.TestContext.&lt;init&gt;(TestContext.java:24)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.picocontainer.injectors.AbstractInjector.newInstance(AbstractInjector.java:145)
+	at org.picocontainer.injectors.ConstructorInjector$1.run(ConstructorInjector.java:342)
+	at org.picocontainer.injectors.AbstractInjector$ThreadLocalCyclicDependencyGuard.observe(AbstractInjector.java:270)
+	at org.picocontainer.injectors.ConstructorInjector.getComponentInstance(ConstructorInjector.java:364)
+	at org.picocontainer.injectors.AbstractInjectionFactory$LifecycleAdapter.getComponentInstance(AbstractInjectionFactory.java:56)
+	at org.picocontainer.behaviors.AbstractBehavior.getComponentInstance(AbstractBehavior.java:64)
+	at org.picocontainer.behaviors.Stored.getComponentInstance(Stored.java:91)
+	at org.picocontainer.DefaultPicoContainer.getInstance(DefaultPicoContainer.java:699)
+	at org.picocontainer.DefaultPicoContainer.getComponent(DefaultPicoContainer.java:647)
+	at org.picocontainer.DefaultPicoContainer.getComponent(DefaultPicoContainer.java:632)
+	at org.picocontainer.parameters.BasicComponentParameter$1.resolveInstance(BasicComponentParameter.java:118)
+	at org.picocontainer.parameters.ComponentParameter$1.resolveInstance(ComponentParameter.java:136)
+	at org.picocontainer.injectors.SingleMemberInjector.getParameter(SingleMemberInjector.java:78)
+	at org.picocontainer.injectors.ConstructorInjector$CtorAndAdapters.getParameterArguments(ConstructorInjector.java:309)
+	at org.picocontainer.injectors.ConstructorInjector$1.run(ConstructorInjector.java:335)
+	at org.picocontainer.injectors.AbstractInjector$ThreadLocalCyclicDependencyGuard.observe(AbstractInjector.java:270)
+	at org.picocontainer.injectors.ConstructorInjector.getComponentInstance(ConstructorInjector.java:364)
+	at org.picocontainer.injectors.AbstractInjectionFactory$LifecycleAdapter.getComponentInstance(AbstractInjectionFactory.java:56)
+	at org.picocontainer.behaviors.AbstractBehavior.getComponentInstance(AbstractBehavior.java:64)
+	at org.picocontainer.behaviors.Stored.getComponentInstance(Stored.java:91)
+	at org.picocontainer.DefaultPicoContainer.getInstance(DefaultPicoContainer.java:699)
+	at org.picocontainer.DefaultPicoContainer.getComponent(DefaultPicoContainer.java:647)
+	at org.picocontainer.DefaultPicoContainer.getComponent(DefaultPicoContainer.java:678)
+	at io.cucumber.picocontainer.PicoFactory.getInstance(PicoFactory.java:49)
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
+	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:85)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:57)
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:84)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:132)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:129)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:129)
+	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
+	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:673)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:220)
+	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:80)
+	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:17)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+</pre></div><a href='#' onClick='toggleBox("stack-trace406410626", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace406410626'><pre>org.openqa.selenium.WebDriverException: unknown error: net::ERR_CONNECTION_TIMED_OUT
+  (Session info: MicrosoftEdge=102.0.1245.39)
+Build info: version: &apos;4.1.4&apos;, revision: &apos;535d840ee2&apos;
+System info: host: &apos;LAPTOP-BADH85B6&apos;, ip: &apos;192.168.0.16&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.8&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [87eb1edbe99a5ab0c9817e6e3332d229, get {url=https://dummy.com}]
+Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 102.0.1245.39, javascriptEnabled: true, ms:edgeOptions: {debuggerAddress: localhost:52824}, msedge: {msedgedriverVersion: 102.0.1245.39 (14b303d1f780..., userDataDir: C:\Users\einst\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:52824/devtoo..., se:cdpVersion: 102.0.1245.39, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 87eb1edbe99a5ab0c9817e6e3332d229
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:567)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:330)
+	at com.base.Base.getWebDriver(Base.java:42)
+	at com.base.TestContext.&lt;init&gt;(TestContext.java:24)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.picocontainer.injectors.AbstractInjector.newInstance(AbstractInjector.java:145)
+	at org.picocontainer.injectors.ConstructorInjector$1.run(ConstructorInjector.java:342)
+	at org.picocontainer.injectors.AbstractInjector$ThreadLocalCyclicDependencyGuard.observe(AbstractInjector.java:270)
+	at org.picocontainer.injectors.ConstructorInjector.getComponentInstance(ConstructorInjector.java:364)
+	at org.picocontainer.injectors.AbstractInjectionFactory$LifecycleAdapter.getComponentInstance(AbstractInjectionFactory.java:56)
+	at org.picocontainer.behaviors.AbstractBehavior.getComponentInstance(AbstractBehavior.java:64)
+	at org.picocontainer.behaviors.Stored.getComponentInstance(Stored.java:91)
+	at org.picocontainer.DefaultPicoContainer.getInstance(DefaultPicoContainer.java:699)
+	at org.picocontainer.DefaultPicoContainer.getComponent(DefaultPicoContainer.java:647)
+	at org.picocontainer.DefaultPicoContainer.getComponent(DefaultPicoContainer.java:632)
+	at org.picocontainer.parameters.BasicComponentParameter$1.resolveInstance(BasicComponentParameter.java:118)
+	at org.picocontainer.parameters.ComponentParameter$1.resolveInstance(ComponentParameter.java:136)
+	at org.picocontainer.injectors.SingleMemberInjector.getParameter(SingleMemberInjector.java:78)
+	at org.picocontainer.injectors.ConstructorInjector$CtorAndAdapters.getParameterArguments(ConstructorInjector.java:309)
+	at org.picocontainer.injectors.ConstructorInjector$1.run(ConstructorInjector.java:335)
+	at org.picocontainer.injectors.AbstractInjector$ThreadLocalCyclicDependencyGuard.observe(AbstractInjector.java:270)
+	at org.picocontainer.injectors.ConstructorInjector.getComponentInstance(ConstructorInjector.java:364)
+	at org.picocontainer.injectors.AbstractInjectionFactory$LifecycleAdapter.getComponentInstance(AbstractInjectionFactory.java:56)
+	at org.picocontainer.behaviors.AbstractBehavior.getComponentInstance(AbstractBehavior.java:64)
+	at org.picocontainer.behaviors.Stored.getComponentInstance(Stored.java:91)
+	at org.picocontainer.DefaultPicoContainer.getInstance(DefaultPicoContainer.java:699)
+	at org.picocontainer.DefaultPicoContainer.getComponent(DefaultPicoContainer.java:647)
+	at org.picocontainer.DefaultPicoContainer.getComponent(DefaultPicoContainer.java:678)
+	at io.cucumber.picocontainer.PicoFactory.getInstance(PicoFactory.java:49)
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
+	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:85)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:57)
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:84)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:132)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:129)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:129)
+	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
+	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:673)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:220)
+	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:80)
+	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:17)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+</pre></div></td>
+<td>178</td>
+<td>runner.TestNgRunner@5d0bf09b</td></tr>
+<tr>
+<td title='runner.TestNgRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNgRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "City Field Numeric Value Validation", "Add New Patient Page"</td>
+<td><div><pre>java.lang.AssertionError: expected [New Patient] but found [www.infosayz.com]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.testng.Assert.assertEquals(Assert.java:665)
+	at stepDefinitions.NewPatientSteps.user_is_on_the_add_new_patient_page(NewPatientSteps.java:37)
+	at ?.User is on the Add New Patient Page(file:///C:/Users/einst/eclipse-workspace-new/DieticianHackathon/src/test/resources/features/NewPatient.feature:55)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1372588940", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1372588940'><pre>java.lang.AssertionError: expected [New Patient] but found [www.infosayz.com]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.testng.Assert.assertEquals(Assert.java:665)
+	at stepDefinitions.NewPatientSteps.user_is_on_the_add_new_patient_page(NewPatientSteps.java:37)
+	at ?.User is on the Add New Patient Page(file:///C:/Users/einst/eclipse-workspace-new/DieticianHackathon/src/test/resources/features/NewPatient.feature:55)
+</pre></div></td>
+<td>84</td>
+<td>runner.TestNgRunner@5d0bf09b</td></tr>
+<tr>
+<td title='runner.TestNgRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNgRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Add New Patient Details", "Add New Patient Page"</td>
+<td><div><pre>java.lang.AssertionError: expected [New Patient] but found [Tomtop – Loving, Shopping, Sharing]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.testng.Assert.assertEquals(Assert.java:665)
+	at stepDefinitions.NewPatientSteps.user_is_on_the_add_new_patient_page(NewPatientSteps.java:37)
+	at ?.User is on the Add New Patient Page(file:///C:/Users/einst/eclipse-workspace-new/DieticianHackathon/src/test/resources/features/NewPatient.feature:5)
+</pre></div><a href='#' onClick='toggleBox("stack-trace249071268", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace249071268'><pre>java.lang.AssertionError: expected [New Patient] but found [Tomtop – Loving, Shopping, Sharing]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.testng.Assert.assertEquals(Assert.java:665)
+	at stepDefinitions.NewPatientSteps.user_is_on_the_add_new_patient_page(NewPatientSteps.java:37)
+	at ?.User is on the Add New Patient Page(file:///C:/Users/einst/eclipse-workspace-new/DieticianHackathon/src/test/resources/features/NewPatient.feature:5)
+</pre></div></td>
+<td>108</td>
+<td>runner.TestNgRunner@5d0bf09b</td></tr>
+<tr>
+<td title='runner.TestNgRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNgRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Phone number should be 10 digits", "Add New Patient Page"</td>
+<td><div><pre>java.lang.AssertionError: expected [New Patient] but found [www.infosayz.com]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.testng.Assert.assertEquals(Assert.java:665)
+	at stepDefinitions.NewPatientSteps.user_is_on_the_add_new_patient_page(NewPatientSteps.java:37)
+	at ?.User is on the Add New Patient Page(file:///C:/Users/einst/eclipse-workspace-new/DieticianHackathon/src/test/resources/features/NewPatient.feature:145)
+</pre></div><a href='#' onClick='toggleBox("stack-trace704638211", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace704638211'><pre>java.lang.AssertionError: expected [New Patient] but found [www.infosayz.com]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.testng.Assert.assertEquals(Assert.java:665)
+	at stepDefinitions.NewPatientSteps.user_is_on_the_add_new_patient_page(NewPatientSteps.java:37)
+	at ?.User is on the Add New Patient Page(file:///C:/Users/einst/eclipse-workspace-new/DieticianHackathon/src/test/resources/features/NewPatient.feature:145)
+</pre></div></td>
+<td>53</td>
+<td>runner.TestNgRunner@5d0bf09b</td></tr>
+<tr>
+<td title='runner.TestNgRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNgRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Phone number Field Character Value Validation", "Add New Patient Page"</td>
+<td><div><pre>java.lang.AssertionError: expected [New Patient] but found [Dummy.com]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.testng.Assert.assertEquals(Assert.java:665)
+	at stepDefinitions.NewPatientSteps.user_is_on_the_add_new_patient_page(NewPatientSteps.java:37)
+	at ?.User is on the Add New Patient Page(file:///C:/Users/einst/eclipse-workspace-new/DieticianHackathon/src/test/resources/features/NewPatient.feature:127)
+</pre></div><a href='#' onClick='toggleBox("stack-trace747895596", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace747895596'><pre>java.lang.AssertionError: expected [New Patient] but found [Dummy.com]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.testng.Assert.assertEquals(Assert.java:665)
+	at stepDefinitions.NewPatientSteps.user_is_on_the_add_new_patient_page(NewPatientSteps.java:37)
+	at ?.User is on the Add New Patient Page(file:///C:/Users/einst/eclipse-workspace-new/DieticianHackathon/src/test/resources/features/NewPatient.feature:127)
+</pre></div></td>
+<td>61</td>
 <td>runner.TestNgRunner@5d0bf09b</td></tr>
 </table><p>
 </body>

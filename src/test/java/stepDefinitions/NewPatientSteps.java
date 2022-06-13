@@ -1,5 +1,7 @@
 package stepDefinitions;
 
+import java.util.Map;
+
 import org.testng.Assert;
 
 import com.base.TestContext;
@@ -176,14 +178,15 @@ public class NewPatientSteps {
 	    
 	    @When("^User fills up the form with Valid Data Inputs as in \"([^\"]*)\" and (.+)$")
 	    public void user_fills_up_the_form_with_valid_data_inputs_as_in_something_and(String sheetname, Integer rownumber) {
-	    	fullName = testContext.gUtil.getxlData(sheetname).get(rownumber).get("Name");
-	    	address1 = testContext.gUtil.getxlData(sheetname).get(rownumber).get("Address1");
-	    	cntry = testContext.gUtil.getxlData(sheetname).get(rownumber).get("Country");
-	    	cityName = testContext.gUtil.getxlData(sheetname).get(rownumber).get("City");
-	    	state = testContext.gUtil.getxlData(sheetname).get(rownumber).get("State");
-	    	postCode = testContext.gUtil.getxlData(sheetname).get(rownumber).get("PostalCode");
-	    	emailAddr = testContext.gUtil.getxlData(sheetname).get(rownumber).get("Email");
-	    	phone = testContext.gUtil.getxlData(sheetname).get(rownumber).get("Phone");
+	    	Map<String,String> xlvalue = testContext.gUtil.getxlData(sheetname).get(rownumber); 
+	    	fullName = xlvalue.get("Name");
+	    	address1 = xlvalue.get("Address1");
+	    	cntry = xlvalue.get("Country");
+	    	cityName = xlvalue.get("City");
+	    	state = xlvalue.get("State");
+	    	postCode = xlvalue.get("PostalCode");
+	    	emailAddr = xlvalue.get("Email");
+	    	phone = xlvalue.get("Phone");
 	    	newPatientPg.fillName(fullName);
 	    	newPatientPg.fillAddr(address1);
 	    	newPatientPg.fillCntry(cntry);

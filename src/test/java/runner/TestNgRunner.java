@@ -5,7 +5,7 @@ import org.testng.annotations.DataProvider;
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 
-@CucumberOptions(features="src/test/resources/features/DieticianHome.feature"
+@CucumberOptions(features="src/test/resources/features/NewPatient.feature"
 				,glue="stepDefinitions"
 				,monochrome=true
 				,plugin= {"html:target/Cucumber.html",
