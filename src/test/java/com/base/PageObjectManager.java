@@ -19,7 +19,11 @@ public class PageObjectManager {
 	private TeamPage teamPage;
 	private ContactusPage contactusPage;
 	private SignUpPage signupPage;
+
+	public ScreenPage screenPage;
+
 	private TestReportPage testReportPage;
+
 
 
 	public PageObjectManager(WebDriver driver)
@@ -73,6 +77,14 @@ public class PageObjectManager {
 		teamPage = new TeamPage(driver);
 
 		return teamPage;
+	}
+	
+	public ScreenPage getScreenPage()
+
+	{
+		screenPage = new ScreenPage(driver);
+
+		return screenPage;
 	}
 
 }
