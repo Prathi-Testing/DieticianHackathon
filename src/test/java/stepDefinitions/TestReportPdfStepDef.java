@@ -3,8 +3,6 @@ package stepDefinitions;
 import org.testng.Assert;
 import com.base.TestContext;
 import com.pages.TestReportPage;
-
-import io.cucumber.java.PendingException;
 import io.cucumber.java.en.*;
 
 public class TestReportPdfStepDef {
