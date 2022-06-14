@@ -19,11 +19,17 @@ public class PageObjectManager {
 	private TeamPage teamPage;
 	private ContactusPage contactusPage;
 	private SignUpPage signupPage;
+	private TestReportPage testReportPage;
 
 
 	public PageObjectManager(WebDriver driver)
 	{
 		this.driver = driver;
+	}
+	
+	public TestReportPage getTestReportPage() {
+		testReportPage = new TestReportPage(driver); 
+		return testReportPage;
 	}
 	
 	public NewPatientPage getNewPatientPg() {
