@@ -3,7 +3,6 @@ package stepDefinitions;
 import org.testng.Assert;
 import com.base.TestContext;
 import com.pages.DieticianHomePage;
-import io.cucumber.java.PendingException;
 import io.cucumber.java.en.*;
 
 public class DieticianHomeSteps {
@@ -83,12 +82,12 @@ public class DieticianHomeSteps {
 	    @Then("^User can see Logged in as Dietician name message in top of right side bar$")
 	    public void user_can_see_logged_in_as_dietician_name_message_in_top_of_right_side_bar(){
 	        dieticianName =  dieticianHP.checkLogInName();
-	        
+	        Assert.assertNotNull(dieticianName);
 	    }
 	    
 	    @Then("^User can read Dietician Home page image and content$")
-	    public void user_can_read_dietician_home_page_image_and_content() throws Throwable {
-	        throw new PendingException();
+	    public void user_can_read_dietician_home_page_image_and_content() {
+	        Assert.assertEquals(dieticianHP.verifyContent(), 0);
 	    }
 	    
 	    @When("^User can see SIGN OUT button after successful login$")
@@ -99,6 +98,7 @@ public class DieticianHomeSteps {
 	    @Then("^User can click on SIGN OUT button for logging off successfully$")
 	    public void user_can_click_on_sign_out_button_for_logging_off_successfully() {
 	        dieticianHP.signOut();
+	        Assert.assertEquals(dieticianHP.signOut(), testContext.expectedHomePageTitle);
 	    }
 
 

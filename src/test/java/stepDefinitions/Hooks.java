@@ -2,7 +2,6 @@ package stepDefinitions;
 
 import java.io.File;
 import java.io.IOException;
-
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -13,12 +12,13 @@ import io.cucumber.java.Scenario;
 
 public class Hooks {
 	
-	TestContext testContext;
+	TestContext testContext;	
 	
 	public Hooks(TestContext testContext)
 	{
 		this.testContext = testContext;
 	}
+	
 	
 	@After
 	public void tearDown()

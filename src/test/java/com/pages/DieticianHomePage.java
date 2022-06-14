@@ -1,5 +1,12 @@
 package com.pages;
 
+import java.io.IOException;
+import java.util.List;
+import org.apache.http.HttpResponse;
+import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.HttpClientBuilder;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -8,6 +15,7 @@ import org.openqa.selenium.support.PageFactory;
 public class DieticianHomePage {
 	
 	WebDriver driver;
+	private int invalidImageCount;
 		
 	@FindBy(id = "HomeButton")
 	private WebElement home;
@@ -29,6 +37,9 @@ public class DieticianHomePage {
 	
 	@FindBy(id="signOut")
 	private WebElement signOutBtn;
+	
+	@FindBy(tagName = "img")
+	private List<WebElement> images;
 	
 	public DieticianHomePage(WebDriver driver)
 	{
@@ -103,9 +114,30 @@ public class DieticianHomePage {
 		return signOutBtn.isDisplayed();
 	}
 	
-	public void verifyContent()
+	public int verifyContent()
 	{
-		
+		for (WebElement image : images) {
+			if (image != null) {
+				
+				HttpClient client = HttpClientBuilder.create().build();
+				HttpGet request = new HttpGet(image.getAttribute("src"));
+				HttpResponse response = null;
+				
+				try {
+					response = client.execute(request);
+				} catch (ClientProtocolException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				
+				if (response.getStatusLine().getStatusCode() != 200)
+					invalidImageCount++;
+			}
+		}
+		return invalidImageCount;
 	}
 	
 	
