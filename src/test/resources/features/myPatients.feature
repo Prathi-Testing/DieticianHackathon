@@ -41,67 +41,103 @@ Feature: My Patient
     When User starts typing inside phone number filter box
     Then Text inside phone number filter box should disappear
 
-  Scenario: Search patients by name
+  Scenario Outline: Search patients by name
     Given User is on my patients
-    When User clicks on search with <name phrase> into name filter box
-    Then Records for <name phrase> are shown
+    When User clicks on search with name phrase into name filter box from "<sheetName>" and <rowNumber>
+    Then Records for name phrase are shown
+    
+    Examples: 
+		|sheetName  |rowNumber |
+		|MyPatient   |  0       |
 
-  Scenario: Search patients by email
+  Scenario Outline: Search patients by email
     Given User is on my patients
-    When User clicks on search with <email phrase> into email address filter
-    Then Records for <email phrase> are shown
+    When User clicks on search with email phrase into email address filter from "<sheetName>" and <rowNumber>
+    Then Records for email phrase are shown from "<sheetNumber>" and <rowNumber>
+		
+		Examples: 
+		|sheetName  |rowNumber |
+		|MyPatient   |  1       |
 
-  Scenario: Search patients by phone number
+  Scenario Outline: Search patients by phone number
     Given User is on my patients
-    When User clicks on search with <phone number> into phone number filter
-    Then Records for <phone number> are shown
+    When User clicks on search with phone number into phone number filter from "<sheetName>" and <rowNumber>
+    Then Records for phone number are shown
 
-  Scenario: Search patients by name and phone number
-    Given User is on my patients
-    When User clicks on search button with <name phrase> into name filter box, <phone number> into phone number filter
-    Then Records for <name phrase> and <phone number> are shown
+		Examples: 
+		|sheetName  |rowNumber |
+		|MyPatient   |  2       |
 
-  Scenario: Search patients by name and email address
+  Scenario Outline: Search patients by name and phone number
     Given User is on my patients
-    When User clicks on search button with <name phrase> into name filter box, <email phrase> into email address filter box
+    When User clicks on search button with name phrase into name filter box, phone number into phone number filter from "<sheetName>" and <rowNumber>
+    Then Records for name phrase and phone number are shown
+    
+    Examples: 
+		|sheetName  |rowNumber |
+		|MyPatient   |  3       |
+
+  Scenario Outline: Search patients by name and email address
+    Given User is on my patients
+    When User clicks on search button with <name phrase> into name filter box, <email phrase> into email address filter box from "<sheetName>" and <rowNumber>
     Then Records for <name phrase> and <email phrase> are shown
+    
+    Examples: 
+		|sheetName  |rowNumber |
+		|MyPatient   |  4       |
 
-  Scenario: Search patients by email address and phone number
+  Scenario Outline: Search patients by email address and phone number
     Given User is on my patients
-    When User clicks on search button with <phone number> into phone number filter box, <email phrase> into email address filter box
-    Then Records for <phone number> and <email phrase> are shown
+    When User clicks on search button with phone number into phone number filter box, email phrase into email address filter box from "<sheetName>" and <rowNumber>
+    Then Records for phone number and email phrase are shown
+    
+    Examples: 
+		|sheetName  |rowNumber |
+		|MyPatient   |  5       |
 
-  Scenario: Search patients by email, Name and phone Number
+  Scenario Outline: Search patients by email, Name and phone Number
     Given User is on my patients
-    When User clicks on search button with <name phrase> into email address filter box, <phone number> into phone number filter box and <email phrase> into email address filter box
-    Then Records for <name phrase>, <phone number> and <email phrase> are shown
+    When User clicks on search button with name phrase into email address filter box, phone number into phone number filter box and email phrase into email address filter box from "<sheetName>" and <rowNumber>
+    Then Records for name phrase, phone number and email phrase are shown
 
-  Scenario: Search Filter
-    Given User is on my patients page
-    When User types in anything other than [0-9\-\(\)] in phone number field
-    Then It must throw error message and discontinue search action
-    Given User is on my patients page
-    When User types in anything other then valid character in email address field
-    Then It must throw error message and discontinue search action
-    Given User is on my patients page
-    When User types in anything other than alphabets in name field
-    Then It must throw error message and discontinue search action
+		Examples: 
+		|sheetName  |rowNumber |
+		|MyPatient   |  6       |
 
+  Scenario Outline: Search Filter
+    Given User is on my patients page
+    When User types in anything other than valid value in search filter field from "<sheetName>" and <rowNumber>
+    Then It must throw error message and discontinue search action from "<sheetName>" and <rowNumber>
+    
+    Examples: 
+		|sheetName  |rowNumber |
+		|MyPatient   |  7       |
+		|MyPatient   |  8       |
+    |MyPatient   |  9       |
+		|MyPatient   |  10       |
+		|MyPatient   |  11       |
+		|MyPatient   |  12       |
+		
   Scenario: Display list of all patients
     Given User is on my patients
     When User clicks on search button with all fields empty
     Then Displays all patients for that dietician only
 
-  Scenario: Verify column names
+  Scenario Outline: Verify column names
     Given User is on my patients
-    When User clicks on search button with or without all fields empty
-    Then It shows columns name like Record Number, Cust ID, Name, Details, Last Visit and Actions
+    When User clicks on search button with all fields empty
+    Then It shows columns name like Record Number, Cust ID, Name, Details, Last Visit and Actions from "<sheetName>" and <rowNumber>
+    
+     Examples: 
+		|sheetName  |rowNumber |
+		|MyPatient   |  13       |
+		|MyPatient   |  14       |
 
   Scenario: Verify Action column has buttons
     Given User is on my patients
     When User clicks on search button with or without all fields empty
     Then It shows action buttons for View Previous Test Report, View Previous Diet Plans, Create New Report/ Plan
-
+       
   Scenario: Verify that page needs pagiation
     Given Patients records are displayed
     When Records are more than 10
@@ -115,29 +151,21 @@ Feature: My Patient
   Scenario: Verify previous link functionality
     Given Patients records are displayed
     When User clicks on previous pagination link
-    Then It goes to previous page
+    Then It goes to pr44evious page
 
-  Scenario: Verify that each patient has Cust ID
+ Scenario Outline: Verify that each patient has Cust ID, name, detail, last visit
     Given User has searched patients
     When Patients records are displayed
-    Then Customer Id is shown in column Cust ID column
-
-  Scenario: Verify that each patient has name
-    Given User has searched patients
-    When Patients records are displayed
-    Then Patient name is displayed in Name column
-
-  Scenario: Verify detail column
-    Given User has searched patients
-    When Patients records are displayed
-    Then Details column shows patient email or phone number or address
-
-  Scenario: Verify last visit column
-    Given User has searched patients
-    When Patients records are displayed
-    Then Last visit date is shown in valid date format
-
-  Scenario: Last visit date is shown in valid date format
+    Then Valid data is shown in given column from "<sheetName>" and <rowNumber> 
+ 
+ 		Examples: 
+		|sheetName  |rowNumber |
+		|MyPatient   |  15       |
+		|MyPatient   |  16       |
+		|MyPatient   |  17       |
+		|MyPatient   |  18       |
+		
+   Scenario: Last visit date is shown in valid date format
     Given User has searched patients
     When Patients records are displayed
     Then Verify that email address is in valid format in details cloumn
@@ -168,27 +196,27 @@ Feature: My Patient
     Then View Previous Test Reports and View Previous Diet Plan should not be present
 
   Scenario: Verify my patient tab on test report page
-    Given User has searched patients after login
+    Given User has searched patients 
     When User is on View Patient Test Reports page
     Then My Patients tab is selected/ highlighted
 
   Scenario: Verify breadcrumbs on test report page
-    Given User has searched patients after login
+    Given User has searched patients 
     When User is on View Patient Test Reports page
     Then It shows breadcrumbs as Dietician Software/ View Recent Test Reports
 
   Scenario: Verify my patient tab on test report page
-    Given User has searched patients after login
+    Given User has searched patients
     When User is on View Patient Test Reports page
     Then My Patients tab is highlighted
 
   Scenario: Verify breadcrumbs on test report page
-    Given User has searched patients after login
+    Given User has searched patients
     When User is on View Patient Test Reports page
     Then It shows breadcrumbs as Dietician Software/ View Recent Test Reports
 
   Scenario: Verify title
-    Given User has searched patients after login
+    Given User has searched patients
     When User is on View Patient Test Reports page
     Then Title is displayed as View Patient Test Reports
 
