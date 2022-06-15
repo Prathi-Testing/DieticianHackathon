@@ -189,14 +189,14 @@ Background:
     
     Examples: 
       | SheetName        | RowNumber |
-      | ValidNewPatient  |         7 |
+      | ValidNewPatient  |         0 |
 
   Scenario Outline: Valid New Patient data submission
  #   Given User is on the Add New Patient Page
     When User clicks on the Add New Patient button after entering valid Patient data as in "<SheetName>" and <RowNumber>
-    Then Page title is displayed as My Patients
+    Then User lands on My Patient page as "<SheetName>" and <RowNumber>
     
     Examples: 
       | SheetName        | RowNumber |
-      | ValidNewPatient  |         7 |
+      | ValidNewPatient  |         0 |
     

@@ -11,15 +11,6 @@ public class TestContext {
 	public GenericClass gUtil;
 	public ExcelReader reader;
 	public PdfReader pdfReader;
-//	public String expectedNewPatientTitle = "New Patient";
-	public String expectedDieticianHomePageTitle = "Dietician Home";
-	public String expectedMyPatientTitle = "My Patient";
-	public String expectedDietPlansTitle = "Diet Plans";
-//	public String expectedHomePageTitle = "Dietician software";
-	public String url;
-	
-	public String expectedTestReportPageTitle = "Patient Test Reports";
-	public String statMessage = "10 Items found, displaying 1 to 10";
 
 	public TestContext()
 	{

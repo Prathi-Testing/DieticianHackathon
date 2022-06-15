@@ -23,9 +23,9 @@ public class DieticianHomeSteps {
 		this.dieticianHP = testContext.pageObjectManager.getdieticianHP();
 	}
 	
-	 @When("^User is on the Dietician Home page$")
-	    public void user_is_on_the_dietician_home_page(){
-		 	Assert.assertEquals(dieticianHP.getTitle(), testContext.expectedDieticianHomePageTitle);
+	 @Then("^User is on the \"([^\"]*)\" page $")
+	    public void user_is_on_the_something_page(String strArg1) {
+	        Assert.assertEquals(dieticianHP.getTitle(), strArg1);
 	    }
 	 
 	 @Then("^User can see the Home button on header menu$")
