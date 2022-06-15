@@ -18,9 +18,9 @@ public class TestReportPdfStepDef {
 	}
 	
 		
-	 	@Given("^User is on View Patient Test Reports page$")
-	    public void user_is_on_view_patient_test_reports_page(){
-		 	Assert.assertEquals(testReportPg.getTitle(),testContext.expectedTestReportPageTitle);
+	@Then("^User is on View Patient Test Reports page as \"([^\"]*)\" and (.+)$")
+    public void user_is_on_view_patient_test_reports_page_as_something_and(String sheetname, Integer rownumber){
+		 	Assert.assertEquals(testReportPg.getTitle(),testContext.gUtil.getxlData(sheetname).get(rownumber).get("Value"));
 	    }
 
 	    @When("^user clicks on view PDF$")
@@ -131,6 +131,11 @@ public class TestReportPdfStepDef {
 	        Assert.assertTrue(testReportPg.validateHeader());
 	    }
 	    
+	    @Then("^User is on \"([^\"]*)\" page$")
+	    public void user_is_on_something_page(String strArg1){
+		 	Assert.assertEquals(testReportPg.getTitle(),strArg1);
+	    }
+	    
 	    @Then("^More than 3 records should be displayed on different pages through pagination$")
 	    public void more_than_3_records_should_be_displayed_on_different_pages_through_pagination() throws Throwable {
 	        Assert.assertTrue(testReportPg.testReportCount()>3);
@@ -145,10 +150,5 @@ public class TestReportPdfStepDef {
 	    public void pagination_has_previous_link() throws Throwable {
 	    	Assert.assertTrue(testReportPg.checkPreviousLink());
 	    }
-
-
-
-
-
 
 }

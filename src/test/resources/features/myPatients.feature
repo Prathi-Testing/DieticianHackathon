@@ -1,20 +1,24 @@
 @DieticianLogin
 Feature: My Patient
   
-  Scenario : Verify my patient tab
+ Scenario: Verify my patient tab
   Given User is on any page after login
   When User clicks on My Patients tab
-  Then My Patients tab is selected/ highlighted
+  Then My Patients tab is selected
 
   Scenario: Verify breadcrumbs
     Given User is on any page after login
     When User clicks on My Patients tab
     Then It shows breadcrubs as Dietician Software MyPatients
 
-  Scenario: Confirm my patient title
+  Scenario Outline: Confirm my patient title
     Given User is on any page after login
     When User clicks on My Patients tab
-    Then Page title is displayed as My Patients
+    Then User lands on My Patient page as "<SheetName>" and <RowNumber>
+    
+    Examples: 
+      | sheetName  | rowNumber |
+      | Page_Title |         2 |
 
   Scenario: Search feature
     Given User is on any page after login
@@ -107,11 +111,8 @@ Feature: My Patient
 
     Examples: 
       | sheetName     | rowNumber |
-      | MyPatient     |         7 |
-      | MyPatient     |         8 |
       | MyPatient     |         9 |
-      | Error Message |         0 |
-
+      
   Scenario: Display list of all patients
     Given User is on My Patients tab
     When User clicks on search button with all fields empty
@@ -132,15 +133,24 @@ Feature: My Patient
     When Records are more than ten
     Then It must show pagination links
 
-  Scenario: Verify next pagination link functionality
+  Scenario Outline: Verify next pagination link functionality
     Given Patients records are displayed
     When User clicks on next pagination link
-    Then It goes to next page
+    Then It goes to next page as in "<sheetname>" and <rownumber>
+    
+    Examples: 
+      | sheetName     | rowNumber |
+      | MyPatient     |         0 |
 
-  Scenario: Verify previous link functionality
+  Scenario Outline: Verify previous link functionality
     Given Patients records are displayed
     When User clicks on previous pagination link
-    Then It goes to previous page
+    Then It goes to previous page as in "<sheetname>" and <rownumber>
+    
+    Examples: 
+      | sheetName     | rowNumber |
+      | MyPatient     |         0 |
+    
 
   Scenario: Verify that each patient has Cust ID, name, phone
     Given User has searched patients
@@ -157,20 +167,32 @@ Feature: My Patient
     When Patients records are displayed
     Then Verify that email address is in valid format in details cloumn
 
-  Scenario: View patients previous diet plans
+  Scenario Outline: View patients previous diet plans
     Given Patients records are displayed
     When User clicks on button View Previous Diet Plans
-    Then It redirects user to Generated Diet Plans page
+    Then User lands on Diet Plans page as "<SheetName>" and <RowNumber>
+    
+    Examples: 
+      | SheetName           | RowNumber |
+      | Page_Title					|         3 |
 
-  Scenario: Create new diet plan
+  Scenario Outline: Create new diet plan
     Given Patients records are displayed
     When User clicks on button Create New Report/Plan
-    Then It redirects user to Confirm Health Conditions and Generate a New Diet plan page
+    Then User lands on Diet Plans page as "<SheetName>" and <RowNumber>
+    
+    Examples: 
+      | SheetName           | RowNumber |
+      | Page_Title					|         3 |
 
-  Scenario: View patients previous test reports
+  Scenario Outline: View patients previous test reports
     Given Patients records are displayed
     When User clicks on button View Previous Test Reports
-    Then User is on View Patient Test Reports page
+    Then User is on View Patient Test Reports page as "<SheetName>" and <RowNumber>
+    
+    Examples: 
+      | SheetName           | RowNumber |
+      | Page_Title					|         5 |
 
   Scenario: Previous test reports plans button should not be displayed for new patient
     Given Patients records are displayed

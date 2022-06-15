@@ -1,13 +1,11 @@
 package com.pages;
 
 import java.util.List;
-
 import org.apache.commons.validator.GenericValidator;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.Assert;
 
 public class MyPatientPage {
 
@@ -363,7 +361,7 @@ public class MyPatientPage {
 		flag = true;
 		for(WebElement visitDate : lastVisitDate) {
 		
-			if(!(emailFilter.getText() == "Never" && vwPreviousReportButton.isDisplayed() == false && vwPreviousDietPlan.isDisplayed() == false)){
+			if(!(visitDate.getText() == "Never" && vwPreviousReportButton.isDisplayed() == false && vwPreviousDietPlan.isDisplayed() == false)){
 				flag = false;
 			}
 		}
