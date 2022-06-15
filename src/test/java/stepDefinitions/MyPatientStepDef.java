@@ -6,6 +6,7 @@ import org.testng.Assert;
 import com.base.TestContext;
 import com.pages.MyPatientPage;
 
+import io.cucumber.java.PendingException;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -19,6 +20,7 @@ public class MyPatientStepDef {
 	private String varLink;
 	private String varPhone;
 	private String varEmail;
+	private String error;
 	
 	public MyPatientStepDef(TestContext testContext)
 	{
@@ -66,8 +68,12 @@ public class MyPatientStepDef {
 
 	@When("User starts typing inside field filter box from {string} and {int}")
 	public void user_starts_typing_inside_field_filter_box_from_and(String sheetname, Integer rownumber) {
-		varName = testContext.gUtil.getxlData(sheetname).get(rownumber).get("Value");
-	    actualMessage = myPatientPg.fillnameFilter(varName);
+		varName = testContext.gUtil.getxlData(sheetname).get(rownumber).get("Name");
+		varPhone = testContext.gUtil.getxlData(sheetname).get(rownumber).get("Phone");
+		varEmail = testContext.gUtil.getxlData(sheetname).get(rownumber).get("Email");
+	    myPatientPg.fillnameFilter(varName);
+	    myPatientPg.fillphoneNumberFilter(varPhone);
+	    myPatientPg.fillemailFilter(varEmail);
 	}
 
 	@Then("Text inside input filter box should disappear")
@@ -136,7 +142,7 @@ public class MyPatientStepDef {
 		myPatientPg.searchPatient();
 	}
 
-	@Then("Records for <name phrase> and <email phrase> are shown")
+	@Then("Records for name phrase and email phrase are shown")
 	public void records_for_name_phrase_and_email_phrase_are_shown() {
 		Assert.assertTrue(myPatientPg.validateNameData());
 		Assert.assertTrue(myPatientPg.validateEmailData());
@@ -175,16 +181,21 @@ public class MyPatientStepDef {
 		Assert.assertTrue(myPatientPg.validatePhoneData());
 	}
 
-//	@When("User types in anything other than valid value in search filter field from {string} and {int}")
-//	public void user_types_in_anything_other_than_valid_value_in_search_filter_field_from_and(String string, Integer int1) {
-//
-//	}
-//
-//	@Then("It must throw error message")
-//	public void it_must_throw_error_message() {
-//	    // Write code here that turns the phrase above into concrete actions
-//	    throw new io.cucumber.java.PendingException();
-//	}
+	@When("User types in anything other than valid value in search filter field from {string} and {int}")
+	public void user_types_in_anything_other_than_valid_value_in_search_filter_field_from_and(String sheetname, Integer rownumber) {
+		varName = testContext.gUtil.getxlData(sheetname).get(rownumber).get("name");
+		varEmail = testContext.gUtil.getxlData(sheetname).get(rownumber).get("email");
+		varPhone = testContext.gUtil.getxlData(sheetname).get(rownumber).get("phone");
+		myPatientPg.fillnameFilter(varName);
+		myPatientPg.fillemailFilter(varEmail);
+		myPatientPg.fillphoneNumberFilter(varPhone);
+		error = myPatientPg.searchPatient();
+	}
+
+	@Then("^It must throw error message from \"([^\"]*)\" and (.+)$")
+    public void it_must_throw_error_message_from_something_and(String sheetname, Integer rownumber) {
+        Assert.assertEquals(error, testContext.gUtil.getxlData(sheetname).get(rownumber).get("Error Message"));
+    }
 
 	@When("User clicks on search button with all fields empty")
 	public void user_clicks_on_search_button_with_all_fields_empty() {
@@ -217,7 +228,7 @@ public class MyPatientStepDef {
 		myPatientPg.validateTable();
 	}
 
-	@When("Records are more than {int}")
+	@When("Records are more than ten")
 	public void records_are_more_than(Integer maxRecord) {
 		myPatientPg.recordCount(maxRecord);
 	}
@@ -252,10 +263,15 @@ public class MyPatientStepDef {
 		myPatientPg.searchPatient();
 	}
 
-//	@Then("Valid data is shown in given column")
-//	public void valid_data_is_shown_in_given_column() {
-//		
-//	}
+	@Then("Valid data is shown in given column")
+	public void valid_data_is_shown_in_given_column() {
+		Assert.assertNotNull(myPatientPg.getName());
+		Assert.assertNotNull(myPatientPg.getCustID());
+		Assert.assertNotNull(myPatientPg.getCity());
+		Assert.assertNotNull(myPatientPg.getEmail());
+		Assert.assertNotNull(myPatientPg.getPhone());
+		Assert.assertNotNull(myPatientPg.getVisitDate());
+	}
 
 	@Then("Verify that date is in valid format in details cloumn")
 	public void verify_that_date_is_in_valid_format_in_details_cloumn() {
@@ -292,11 +308,6 @@ public class MyPatientStepDef {
 		myPatientPg.clickReportButton();
 	}
 
-	@Then("It redirects user to View Patient Test Reports page")
-	public void it_redirects_user_to_view_patient_test_reports_page() {
-		Assert.assertEquals(myPatientPg.getTitle(), testContext.expectedTestReportPageTitle);
-	}
-
 	@When("Patient is a new patient")
 	public void patient_is_a_new_patient() {
 		myPatientPg.searchPatient();
@@ -307,7 +318,5 @@ public class MyPatientStepDef {
 		Assert.assertTrue(myPatientPg.newPatientData());
 	}
 
-	
-	
 }
 

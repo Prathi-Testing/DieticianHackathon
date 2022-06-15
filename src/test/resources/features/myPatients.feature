@@ -26,7 +26,7 @@ Feature: My Patient
     When User clicks on My Patients tab
     Then Button used for search has text as Search
 
-  Scenario Outline: Verify default text in name filter input box goes away
+  Scenario Outline: Verify default text in search filter input box goes away
     Given User is on My Patients tab
     When User starts typing inside field filter box from "<sheetName>" and <rowNumber>
     Then Text inside input filter box should disappear
@@ -103,13 +103,14 @@ Feature: My Patient
   Scenario Outline: Search Filter
     Given User is on My Patients tab
     When User types in anything other than valid value in search filter field from "<sheetName>" and <rowNumber>
-    Then It must throw error message
+    Then It must throw error message from "<sheetName>" and <rowNumber>
 
     Examples: 
-      | sheetName | rowNumber |
-      | MyPatient |         7 |
-      | MyPatient |         8 |
-      | MyPatient |         9 |
+      | sheetName     | rowNumber |
+      | MyPatient     |         7 |
+      | MyPatient     |         8 |
+      | MyPatient     |         9 |
+      | Error Message |         0 |
 
   Scenario: Display list of all patients
     Given User is on My Patients tab
@@ -128,7 +129,7 @@ Feature: My Patient
 
   Scenario: Verify that page needs pagiation
     Given Patients records are displayed
-    When Records are more than 10
+    When Records are more than ten
     Then It must show pagination links
 
   Scenario: Verify next pagination link functionality
@@ -141,17 +142,10 @@ Feature: My Patient
     When User clicks on previous pagination link
     Then It goes to previous page
 
-  Scenario Outline: Verify that each patient has Cust ID, name, phone
+  Scenario: Verify that each patient has Cust ID, name, phone
     Given User has searched patients
     When Patients records are displayed
-    Then Valid data is shown in given column from "<sheetName>" and <rowNumber>
-
-    Examples: 
-      | sheetName | rowNumber |
-      | MyPatient |        10 |
-      | MyPatient |        11 |
-      | MyPatient |        12 |
-      | MyPatient |        13 |
+    Then Valid data is shown in given column
 
   Scenario: Last visit date is shown in valid date format
     Given User has searched patients
@@ -176,7 +170,7 @@ Feature: My Patient
   Scenario: View patients previous test reports
     Given Patients records are displayed
     When User clicks on button View Previous Test Reports
-    Then It redirects user to View Patient Test Reports page
+    Then User is on View Patient Test Reports page
 
   Scenario: Previous test reports plans button should not be displayed for new patient
     Given Patients records are displayed

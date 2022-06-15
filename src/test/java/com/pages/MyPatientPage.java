@@ -7,6 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 
 public class MyPatientPage {
 
@@ -137,6 +138,30 @@ public class MyPatientPage {
 		else return false;
 	}
 	
+	public String getName() {
+		return nameColummFields.get(0).getText();
+	}
+	
+	public String getCustID() {
+		return nameColummFields.get(0).getText();
+	}
+	
+	public String getPhone() {
+		return detailsPhoneColumnField.get(0).getText();
+	}
+	
+	public String getEmail() {
+		return detailsEmailColumnField.get(0).getText();
+	}
+	
+	public String getCity() {
+		return detailsCity.get(0).getText();
+	}
+	
+	public String getVisitDate() {
+		return lastVisitDate.get(0).getText();
+	}
+	
 	public boolean validatePlaceholderText()
 	{
 		if((nameFilter.getAttribute("placeholder")==null)
@@ -172,6 +197,7 @@ public class MyPatientPage {
 		return pickMessage();
 	}
 	
+	// Field level Validation
 	
 	public Boolean validateTable()
 	{	
@@ -218,6 +244,17 @@ public class MyPatientPage {
 		return flag;	
 	}
 	
+	public Boolean validateCustIdData()
+	{	
+		flag = true;
+		for(WebElement CustIdField : custID) {
+			String CustIdFieldval = CustIdField.getText();
+			if(CustIdFieldval.substring(0) != "C") {
+				flag = false;	
+			}
+		}
+		return flag;	
+	}
 	
 	
 // Buttons in table
