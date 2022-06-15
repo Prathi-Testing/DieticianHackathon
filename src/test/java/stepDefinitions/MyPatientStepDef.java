@@ -2,11 +2,8 @@
 package stepDefinitions;
 
 import org.testng.Assert;
-
 import com.base.TestContext;
 import com.pages.MyPatientPage;
-
-import io.cucumber.java.PendingException;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -16,8 +13,6 @@ public class MyPatientStepDef {
 	TestContext testContext;
 	MyPatientPage myPatientPg;
 	private String varName;
-	private String actualMessage;
-	private String varLink;
 	private String varPhone;
 	private String varEmail;
 	private String error;
@@ -26,7 +21,6 @@ public class MyPatientStepDef {
 	{
 		this.testContext = testContext;
 		this.myPatientPg = testContext.pageObjectManager.getMyPatientPage();
-		Integer maxRecord = 10;
 	}
 	
 	
@@ -45,11 +39,6 @@ public class MyPatientStepDef {
 		Assert.assertTrue(myPatientPg.validateBreadCrumbs());
 	}
 
-	@Then("Page title is displayed as My Patients")
-	public void page_title_is_displayed_as_my_patients() {
-		 Assert.assertEquals(myPatientPg.getTitle(), testContext.expectedMyPatientTitle);
-	}
-
 	@Then("Name, email and phone number filter options and search button are displayed")
 	public void name_email_and_phone_number_filter_options_and_search_button_are_displayed() {
 		Assert.assertTrue(myPatientPg.validatePrimaryInfo());
@@ -62,7 +51,6 @@ public class MyPatientStepDef {
 
 	@Given("User is on My Patients tab")
 	public void user_is_on_my_patients_tab() {
-		Assert.assertEquals(myPatientPg.getTitle(), testContext.expectedMyPatientTitle);
 		Assert.assertTrue(myPatientPg.verifyPatientTab());
 	}
 
@@ -85,7 +73,7 @@ public class MyPatientStepDef {
 	public void user_clicks_on_search_with_name_phrase_into_name_filter_box_from_and(String sheetname, Integer rownumber) {
 		varName = testContext.gUtil.getxlData(sheetname).get(rownumber).get("Value");
 		myPatientPg.fillnameFilter(varName);
-		actualMessage = myPatientPg.searchPatient();
+		
 	}
 
 	@Then("Records for name phrase are shown")
@@ -97,7 +85,7 @@ public class MyPatientStepDef {
 	public void user_clicks_on_search_with_email_phrase_into_email_address_filter_from_and(String sheetname, Integer rownumber) {
 		varEmail = testContext.gUtil.getxlData(sheetname).get(rownumber).get("email");
 		myPatientPg.fillemailFilter(varEmail);
-		actualMessage = myPatientPg.searchPatient();
+		
 	}
 
 	@Then("Records for email phrase are shown")
@@ -109,7 +97,7 @@ public class MyPatientStepDef {
 	public void user_clicks_on_search_with_phone_number_into_phone_number_filter_from_and(String sheetname, Integer rownumber) {
 		varName = testContext.gUtil.getxlData(sheetname).get(rownumber).get("name");
 		myPatientPg.fillphoneNumberFilter(varName);
-		actualMessage = myPatientPg.searchPatient();
+		
 		myPatientPg.searchPatient();
 	}
 
@@ -183,9 +171,9 @@ public class MyPatientStepDef {
 
 	@When("User types in anything other than valid value in search filter field from {string} and {int}")
 	public void user_types_in_anything_other_than_valid_value_in_search_filter_field_from_and(String sheetname, Integer rownumber) {
-		varName = testContext.gUtil.getxlData(sheetname).get(rownumber).get("name");
-		varEmail = testContext.gUtil.getxlData(sheetname).get(rownumber).get("email");
-		varPhone = testContext.gUtil.getxlData(sheetname).get(rownumber).get("phone");
+		varName = testContext.gUtil.getxlData(sheetname).get(rownumber).get("Name");
+		varEmail = testContext.gUtil.getxlData(sheetname).get(rownumber).get("Email");
+		varPhone = testContext.gUtil.getxlData(sheetname).get(rownumber).get("Phone");
 		myPatientPg.fillnameFilter(varName);
 		myPatientPg.fillemailFilter(varEmail);
 		myPatientPg.fillphoneNumberFilter(varPhone);
@@ -200,7 +188,7 @@ public class MyPatientStepDef {
 	@When("User clicks on search button with all fields empty")
 	public void user_clicks_on_search_button_with_all_fields_empty() {
 		Assert.assertTrue(myPatientPg.validateEmptyField());
-		actualMessage = myPatientPg.searchPatient();
+		
 	}
 
 	@Then("Displays all patients for that dietician only")
@@ -215,7 +203,7 @@ public class MyPatientStepDef {
 
 	@When("User clicks on search button with or without all fields empty")
 	public void user_clicks_on_search_button_with_or_without_all_fields_empty() {
-		actualMessage = myPatientPg.searchPatient();
+		
 	}
 
 	@Then("It shows action buttons for View Previous Test Report, View Previous Diet Plans, Create New Report Plan")
@@ -243,9 +231,10 @@ public class MyPatientStepDef {
 		myPatientPg.paginationLinkClick();
 	}
 
-	@Then("It goes to next page")
-	public void it_goes_to_next_page() {
-		Assert.assertNotEquals(myPatientPg.validatePaginationLinkClick(), testContext.statMessage);
+	@Then("^It goes to next page as in \"([^\"]*)\" and (.+)$")
+    public void it_goes_to_next_page_as_in_something_and(String sheetname, Integer rownumber) {
+		Assert.assertNotEquals(myPatientPg.validatePaginationLinkClick(), 
+								testContext.gUtil.getxlData(sheetname).get(rownumber).get("Status Message"));
 	}
 
 	@When("User clicks on previous pagination link")
@@ -253,9 +242,10 @@ public class MyPatientStepDef {
 		myPatientPg.prevPaginationLinkClick();
 	}
 
-	@Then("It goes to previous page")
-	public void it_goes_to_previous_page() {
-		Assert.assertNotEquals(myPatientPg.validatePaginationLinkClick(), testContext.statMessage);
+	 @Then("^It goes to previous page as in \"([^\"]*)\" and (.+)$")
+	    public void it_goes_to_previous_page_as_in_something_and(String sheetname, Integer rownumber){
+		Assert.assertNotEquals(myPatientPg.validatePaginationLinkClick(), 
+								testContext.gUtil.getxlData(sheetname).get(rownumber).get("Status Message"));
 	}
 
 	@Given("User has searched patients")
@@ -288,24 +278,14 @@ public class MyPatientStepDef {
 		myPatientPg.clickDietPlanButton();
 	}
 
-	@Then("It redirects user to Generated Diet Plans page")
-	public void it_redirects_user_to_generated_diet_plans_page() {
-		 Assert.assertEquals(myPatientPg.getTitle(), testContext.expectedDietPlansTitle);
-	}
-
 	@When("User clicks on button Create New Report\\/Plan")
 	public void user_clicks_on_button_create_new_report_plan() {
 		myPatientPg.clickCreateReportButton();
 	}
 
-	@Then("It redirects user to Confirm Health Conditions and Generate a New Diet plan page")
-	public void it_redirects_user_to_confirm_health_conditions_and_generate_a_new_diet_plan_page() {
-		 Assert.assertEquals(myPatientPg.getTitle(), testContext.expectedDietPlansTitle);
-	}
-
-	@When("User clicks on button View Previous Test Reports")
-	public void user_clicks_on_button_view_previous_test_reports() {
-		myPatientPg.clickReportButton();
+	@When("^User clicks on button View Previous Test Reports$")
+    public void user_clicks_on_button_view_previous_test_reports(){
+ 		myPatientPg.clickReportButton();
 	}
 
 	@When("Patient is a new patient")

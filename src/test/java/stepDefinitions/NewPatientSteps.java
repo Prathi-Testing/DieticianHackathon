@@ -1,13 +1,9 @@
 package stepDefinitions;
 
 import java.util.Map;
-
 import org.testng.Assert;
-
 import com.base.TestContext;
 import com.pages.NewPatientPage;
-
-import io.cucumber.java.PendingException;
 import io.cucumber.java.en.*;
 
 public class NewPatientSteps {
