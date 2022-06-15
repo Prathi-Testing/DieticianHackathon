@@ -1,23 +1,28 @@
 package com.pages;
-
-import org.openqa.selenium.SearchContext;
+import java.util.List;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.Assert;
 
-import com.base.Base;
 
-public class SignInPage extends Base  {
+
+
+public class SignInPage  {
+	
+	public WebDriver driver;
 	
 	@FindBy(name="Sign In")
 	WebElement SignIn;
 	
-	@FindBy(name="star")
-	WebElement starsymbol;
+	@FindBy(xpath="//span[contains(text(), '*')]")
+	List<WebElement> starsymbol;
+	
+	@FindBy(xpath="//input[contains(text(),'error message')]")
+	WebElement Message;
 	
 	@FindBy(xpath="//input(@id='username')")
-	WebElement Username;
+	WebElement SignInUsername;
 	
 	@FindBy(xpath="//input(@id='password')")
 	WebElement Password;
@@ -40,11 +45,14 @@ public class SignInPage extends Base  {
 	@FindBy(xpath="//input(@id='email')")
 	WebElement Email;
 	
-	@FindBy(xpath="//input(@class='pass")
+	@FindBy(xpath="//input(@class='pass')")
 	WebElement LogInPassword;
 	
 	@FindBy(xpath="//button(@id='login')")
-	WebElement EmailLogIn;
+    WebElement EmailLogIn;
+	
+	@FindBy(xpath="//a(@id='forgotpass')")
+    WebElement ForgotYourPassword;
 	
 	@FindBy(xpath="//*[contains(text(),'Or log in with')]")
 	WebElement textLogIn;
@@ -58,6 +66,15 @@ public class SignInPage extends Base  {
 	@FindBy(xpath="//a[contains(text(),'Sign up here')]")
 	WebElement SignUpLink;
 	
+	@FindBy(xpath="//image(@class='4rfg6')")
+	WebElement SignInIcon;
+	
+	@FindBy(xpath="//*[contains(text(),'signOut')]")
+	WebElement signout;
+	
+	@FindBy(xpath="//*[contains(text(),'Login')]")
+	WebElement loginbutton;
+	
 	
 	
 	
@@ -66,7 +83,9 @@ public class SignInPage extends Base  {
 	
 	//initializing page objects
 	
-	public SignInPage() {
+	public SignInPage(WebDriver driver ) {
+		
+		this.driver=driver;
 		
 		PageFactory.initElements(driver,this);
 	
@@ -79,17 +98,107 @@ public class SignInPage extends Base  {
 		return driver.getTitle();
 	}
 	
-    public Boolean MandatoryFields() {
-    	return starsymbol.isDisplayed();
+    public List MandatoryFields() {
+    	return starsymbol;
+    }
+
+    public String SignInHeading() {
+    	return SignIn.getText();
+    }
+    public String  SignButton() {
+    	return SigInButton.getText();
+    	
     }
     
-    public Boolean SignInHeaing() {
-    	return SignIn.isDisplayed();
+    public String ForgotPassword() {
+    	ForgotPassword.click();
+    	return driver.getTitle();
+    	
+    	
+    	
     }
-    public Boolean SignButton() {
-    	return SigInButton.isEnabled();
+    public String NotMemberButton() {
+    	NotMemberLink.click();
+    	return driver.getTitle();
     }
-    public String EmptyFields() {
-    	Assert.
-    }
+    public String fillCred(String uName,String pwd)
+	{
+		SignInUsername.sendKeys(uName);
+		Password.sendKeys();
+		SigInButton.click();
+		
+		if (Message.isDisplayed())
+		{
+			return Message.getText();
+		}else
+		{
+			return " ";
+		}
 	}
+    public String loginHeading() {
+    	return LogInHeading.getText();
+    }
+    
+	 public String LoginWithCred(String uName,String pwd)
+		{
+			SignInUsername.sendKeys(uName);
+			Password.sendKeys(pwd);
+			SigInButton.click();
+			
+			if (Message.isDisplayed())
+			{
+				return Message.getText();
+			}else
+			{
+				return " ";
+			}
+    
+    }
+	 public String ForgotYourPassword() {
+	    	ForgotYourPassword.click();
+	    	return driver.getTitle();
+	    	
+	 
+	 }
+	 public String FacebookLogIn() {
+		  FacebookLink.click();
+		  return driver.getTitle();
+		 
+	 }
+	 public String GoogleLogIn() {
+		 GoogleLink.click();
+		 return driver.getTitle();
+		 
+	 
+}
+	 public Boolean SignUpLink() {
+		 return SignUpLink.isEnabled();
+		 
+	 
+	 }
+
+	public String SignInIcon() {
+		SignInIcon.click();
+		return driver.getTitle();
+	}
+
+	public String getmessage() {
+		return Message.getText();
+		
+		
+	}
+	public Boolean checkSignout()
+	{
+
+	return signout.isDisplayed();
+	}
+	public String SignInButton() {
+		SigInButton.click();
+		return driver.getTitle();
+	}
+	public String LogInButton() {
+		loginbutton.click();
+		return driver.getTitle();
+	
+	}}
+	

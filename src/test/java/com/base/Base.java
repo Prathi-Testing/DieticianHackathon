@@ -17,7 +17,7 @@ import org.openqa.selenium.firefox.FirefoxProfile;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Base {
-	protected WebDriver driver;
+	private WebDriver driver;
 	private FileInputStream FIS;
 	private Properties prop;
 	private String browserProp;
@@ -38,6 +38,7 @@ public class Base {
 			launchBrowser();
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
 			driver.manage().window().maximize();
+			driver.manage().deleteAllCookies();
 			driver.get(url);
 			
 			
