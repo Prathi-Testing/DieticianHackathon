@@ -32,9 +32,9 @@ public class NewPatientSteps {
 	}
 	
 	
-	 @Given("^User is on the Add New Patient Page$")
-	    public void user_is_on_the_add_new_patient_page(){
-	        Assert.assertEquals(newPatientPg.getTitle(), testContext.expectedNewPatientTitle);
+	 @Then("^User lands on \"([^\"]*)\"$")
+	    public void user_lands_on_something(String strArg1) {
+	        Assert.assertEquals(newPatientPg.getTitle(),strArg1 );
 	    }
 
 	    @Then("^Patient Data Form is visible$")
@@ -206,12 +206,5 @@ public class NewPatientSteps {
 	    public void user_clicks_on_the_add_new_patient_button_after_entering_valid_patient_data_as_in_something_and(String sheetname, String rownumber){
 	    	newPatientPg.submitForm();
 	    }
-
-	    @Then("^User lands on My Patients page with the \"([^\"]*)\" details displayed$")
-	    public void user_lands_on_my_patients_page_with_the_something_details_displayed(String strArg1) throws Throwable {
-	        throw new PendingException();
-	    }
-
-
 
 }

@@ -20,20 +20,34 @@ Background:
     When User is on the Dietician Home page
     Then User can see the "Diet Plans" tab from the header menu
 
-  Scenario: Clicking New Patient Page After Login
+  Scenario Outline: Clicking New Patient Page After Login
     Given User is on the Dietician Home page
     When User selects New patient button
-    Then User lands on New Patient page
+    Then User lands on New Patient page as "<SheetName>" and <RowNumber>
 
-  Scenario: Clicking My Patient Page After Login
+		Examples: 
+      | SheetName           | RowNumber |
+      | Page_Title					|         0 |
+
+  Scenario Outline: Clicking My Patient Page After Login
     Given User is on the Dietician Home page
     When User selects My Patient button
-    Then User lands on My Patient page
+    Then User lands on My Patient page as "<SheetName>" and <RowNumber>
+    
+    Examples: 
+      | SheetName           | RowNumber |
+      | Page_Title					|         2 |
+    
 
-  Scenario: Clicking Diet Plans Page After Login
+  Scenario Outline: Clicking Diet Plans Page After Login
     Given User is on the Dietician Home page
     When User selects Diet Plans button
-    Then User lands on Diet Plans page
+    Then User lands on Diet Plans page as "<SheetName>" and <RowNumber>
+    
+    Examples: 
+      | SheetName           | RowNumber |
+      | Page_Title					|         3 |
+    
 
   Scenario: Verify Dietician Home Page Side Bar After Login
     When User is on the Dietician Home page
@@ -47,7 +61,13 @@ Background:
     When User is on the Dietician Home page
     Then User can read Dietician Home page image and content
 
-  Scenario: Verify Dietician Home Page SIGN OUT After Login
+  Scenario Outline: Verify Dietician Home Page SIGN OUT After Login
     Given User is on the Dietician Home page
     When User can see SIGN OUT button after successful login
-    Then User can click on SIGN OUT button for logging off successfully
+    Then User can click on SIGN OUT button and log off successfully as "<SheetName>" and <RowNumber>
+    
+    Examples: 
+      | SheetName           | RowNumber |
+      | Page_Title					|         4 |
+    
+    
