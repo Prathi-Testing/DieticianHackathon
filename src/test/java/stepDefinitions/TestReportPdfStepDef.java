@@ -16,6 +16,7 @@ public class TestReportPdfStepDef {
 		this.testContext = testContext;
 		this.testReportPg = testContext.pageObjectManager.getTestReportPage();
 	}
+	
 		
 	 	@Given("^User is on View Patient Test Reports page$")
 	    public void user_is_on_view_patient_test_reports_page(){
