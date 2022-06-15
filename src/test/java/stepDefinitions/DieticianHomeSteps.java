@@ -13,6 +13,9 @@ public class DieticianHomeSteps {
 	private String myPatientTitle;
 	private String dietPlansTitle;
 	private String dieticianName;
+	private String newPatientTab = "New Patient";
+	private String dietPlansTab="Diet Plans";
+	private String myPatientTab = "My Patient";
 	
 	public DieticianHomeSteps(TestContext testContext)
 	{
@@ -32,13 +35,13 @@ public class DieticianHomeSteps {
 	 
 	 @Then("^User can see the \"([^\"]*)\" tab from the header menu$")
 	    public void user_can_see_the_something_tab_from_the_header_menu(String strArg1) throws Throwable {
-	        if(strArg1.equalsIgnoreCase("New Patient"))
+	        if(strArg1.equalsIgnoreCase(newPatientTab))
 	        {
 	        	Assert.assertTrue(dieticianHP.checkNewPatient());
-	        }else if(strArg1.equalsIgnoreCase("My Patient"))
+	        }else if(strArg1.equalsIgnoreCase(myPatientTab))
 	        {
 	        	Assert.assertTrue(dieticianHP.checkMyPatients());
-	        }else if(strArg1.equalsIgnoreCase("Diet Plans"))
+	        }else if(strArg1.equalsIgnoreCase(dietPlansTab))
 	        {
 	        	Assert.assertTrue(dieticianHP.checkDietPlans());
 	        }
@@ -49,9 +52,9 @@ public class DieticianHomeSteps {
 		 	newPatientTitle = dieticianHP.clickNewPatient();
 	    }
 
-	    @Then("^User lands on New Patient page$")
-	    public void user_lands_on_new_patient_page(){
-	    	Assert.assertEquals(newPatientTitle, testContext.expectedNewPatientTitle);
+	 @Then("^User lands on New Patient page as \"([^\"]*)\" and (.+)$")
+	    public void user_lands_on_new_patient_page_as_something_and(String sheetname, Integer rownumber){
+	    	Assert.assertEquals(newPatientTitle, testContext.gUtil.getxlData(sheetname).get(rownumber).get("value"));
 	    }
 
 	    @When("^User selects My Patient button$")
@@ -59,9 +62,9 @@ public class DieticianHomeSteps {
 	    	myPatientTitle = dieticianHP.clickMyPatients();
 	    }
 
-	    @Then("^User lands on My Patient page$")
-	    public void user_lands_on_my_patient_page(){
-	        Assert.assertEquals(myPatientTitle, testContext.expectedMyPatientTitle);
+	    @Then("^User lands on My Patient page as \"([^\"]*)\" and (.+)$")
+	    public void user_lands_on_my_patient_page_as_something_and(String sheetname, Integer rownumber){
+	       	Assert.assertEquals(myPatientTitle, testContext.gUtil.getxlData(sheetname).get(rownumber).get("value"));
 	    }
 
 	    @When("^User selects Diet Plans button$")
@@ -69,9 +72,9 @@ public class DieticianHomeSteps {
 	    	dietPlansTitle = dieticianHP.clickDietPlans();
 	    }
 
-	    @Then("^User lands on Diet Plans page$")
-	    public void user_lands_on_diet_plans_page() {
-	        Assert.assertEquals(dietPlansTitle, testContext.expectedDietPlansTitle);
+	    @Then("^User lands on Diet Plans page as \"([^\"]*)\" and (.+)$")
+	    public void user_lands_on_diet_plans_page_as_something_and(String sheetname, Integer rownumber){
+	        Assert.assertEquals(dietPlansTitle, testContext.gUtil.getxlData(sheetname).get(rownumber).get("value"));
 	    }
 
 	    @Then("^User can see Banner or Announcements section in right side bar$")
@@ -95,10 +98,11 @@ public class DieticianHomeSteps {
 	        Assert.assertTrue(dieticianHP.checkSignOut());
 	    }
 
-	    @Then("^User can click on SIGN OUT button for logging off successfully$")
-	    public void user_can_click_on_sign_out_button_for_logging_off_successfully() {
+
+	    @Then("^User can click on SIGN OUT button and log off successfully as \"([^\"]*)\" and (.+)$")
+	    public void user_can_click_on_sign_out_button_and_log_off_successfully_as_something_and(String sheetname, Integer rownumber){
 	        dieticianHP.signOut();
-	        Assert.assertEquals(dieticianHP.signOut(), testContext.expectedHomePageTitle);
+	        Assert.assertEquals(dieticianHP.signOut(), testContext.gUtil.getxlData(sheetname).get(rownumber).get("value"));
 	    }
 
 
