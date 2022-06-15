@@ -20,7 +20,7 @@ public class PageObjectManager {
 	private ContactusPage contactusPage;
 	private SignUpPage signupPage;
 	private TestReportPage testReportPage;
-
+	private MyPatientPage myPatientPage;
 
 	public PageObjectManager(WebDriver driver)
 	{
@@ -30,6 +30,11 @@ public class PageObjectManager {
 	public TestReportPage getTestReportPage() {
 		testReportPage = new TestReportPage(driver); 
 		return testReportPage;
+	}
+	
+	public MyPatientPage getMyPatientPage() {
+		myPatientPage = new MyPatientPage(driver); 
+		return myPatientPage;
 	}
 	
 	public NewPatientPage getNewPatientPg() {

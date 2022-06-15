@@ -19,7 +19,7 @@ public class TestContext {
 	public String url;
 	public String registerTitle;
 	public String expectedTestReportPageTitle = "Patient Test Reports";
-	
+	public String statMessage = "10 Items found, displaying 1 to 10";
 
 	public TestContext()
 	{
