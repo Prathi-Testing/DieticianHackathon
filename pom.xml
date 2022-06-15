@@ -1,23 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
+<project xmlns="http://maven.apache.org/POM/4.0.0"   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
 
-  <groupId>DieticianHackathon</groupId>
-  <artifactId>DieticianHackathon</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+	<groupId>DieticianHackathon</groupId>
+	<artifactId>DieticianHackathon</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
 
-  <name>DieticianHackathon</name>
-  <!-- FIXME change it to the project's website -->
-  <url>http://www.example.com</url>
+	<name>DieticianHackathon</name>
+	<!-- FIXME change it to the project's website -->
+	<url>https://dummy.com</url>
 
-  <properties>
+	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
 	</properties>
-	
+
 	<build>
 		<plugins>
 			<!-- Following plugin executes the testng tests -->
@@ -26,17 +25,15 @@
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>2.19.1</version>
 				<configuration>
-				<systemProperties>
-					<property>
-						<name>allure.results.directory</name>
-						<value>${project.build.directory}/allure-results</value>
-					</property>
-				</systemProperties>
-				<testFailureIgnore>true</testFailureIgnore>
+					<systemProperties>
+						<property>
+							<name>allure.results.directory</name>
+							<value>${project.build.directory}/allure-results</value>
+						</property>
+					</systemProperties>
+					<testFailureIgnore>true</testFailureIgnore>
 					<!-- Suite testng xml file to consider for test execution -->
-									</configuration>
-
-
+				</configuration>
 			</plugin>
 			<!-- Compiler plugin configures the java version to be used for compiling 
 				the code -->
@@ -47,11 +44,9 @@
 					<source>11</source>
 					<target>11</target>
 				</configuration>
-				
 			</plugin>
 		</plugins>
 	</build>
-	
 
 	<dependencies>
 
@@ -91,7 +86,6 @@
 			<version>5.1.1</version>
 		</dependency>
 
-		
 		<!-- https://mvnrepository.com/artifact/tech.grasshopper/extentreports-cucumber7-adapter -->
 		<!-- avoid using listeners with below dependency -->
 		<dependency>
@@ -99,13 +93,13 @@
 			<artifactId>extentreports-cucumber7-adapter</artifactId>
 			<version>1.5.1</version>
 		</dependency>
+
 		<!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
 		<dependency>
 			<groupId>com.aventstack</groupId>
 			<artifactId>extentreports</artifactId>
 			<version>5.0.9</version>
 		</dependency>
-		
 
 		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
 		<dependency>
@@ -120,17 +114,28 @@
 			<artifactId>poi-ooxml</artifactId>
 			<version>5.2.2</version>
 		</dependency>
-		
+
 		<!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-testng -->
 		<dependency>
 			<groupId>io.qameta.allure</groupId>
 			<artifactId>allure-testng</artifactId>
 			<version>2.17.2</version>
 		</dependency>
-		
 
+		<!-- https://mvnrepository.com/artifact/org.apache.pdfbox/pdfbox -->
+		<dependency>
+			<groupId>org.apache.pdfbox</groupId>
+			<artifactId>pdfbox</artifactId>
+			<version>2.0.24</version>
+		</dependency>
 
+		<!-- https://mvnrepository.com/artifact/commons-validator/commons-validator -->
+		<dependency>
+			<groupId>commons-validator</groupId>
+			<artifactId>commons-validator</artifactId>
+			<version>1.7</version>
+		</dependency>
 
 	</dependencies>
- 
+
 </project>
