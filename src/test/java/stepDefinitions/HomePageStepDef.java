@@ -17,6 +17,8 @@ public class HomePageStepDef {
 	private String actualTitle;
 	private String Title;
 	private String expectedTitle;
+	private String registerTitle;
+	private String url;
 
 	public HomePageStepDef(TestContext testContext) {
 		this.testContext = testContext;
@@ -26,8 +28,8 @@ public class HomePageStepDef {
 	@Given("User is on Dietician Website")
 	public void user_lands_dietician_website() {
 
-		testContext.url = homePage.getURL();
-		Reporter.log(testContext.url);
+		url = homePage.getURL();
+		Reporter.log(url);
 	}
 
 	@When("User is on Home page")
@@ -81,7 +83,7 @@ public class HomePageStepDef {
 
 	@When("User lands on Register page")
 	public void user_lands_on_register_page() {
-		testContext.registerTitle = homePage.getRegisterLink();
+		registerTitle = homePage.getRegisterLink();
 	}
 
 	@When("User Clicks on the Team Page")
@@ -110,7 +112,7 @@ public class HomePageStepDef {
 
 		expectedTitle = testContext.gUtil.getxlData(sheetName).get(rowNumber).get("Title");
 
-		Assert.assertEquals(testContext.registerTitle, expectedTitle);
+		Assert.assertEquals(registerTitle, expectedTitle);
 	}
 
 }

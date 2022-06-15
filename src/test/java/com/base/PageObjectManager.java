@@ -19,11 +19,14 @@ public class PageObjectManager {
 	private TeamPage teamPage;
 	private ContactusPage contactusPage;
 	private SignUpPage signupPage;
-
-	public ScreenPage screenPage;
+	private SignInPage signinPage;
+	private ScreenPage screenPage;
 
 	private TestReportPage testReportPage;
 	private MyPatientPage myPatientPage;
+	
+	private CreatePlanPage createplanPage;
+	private DietPlanPage dietPlanPage;
 
 
 	public PageObjectManager(WebDriver driver)
@@ -90,6 +93,28 @@ public class PageObjectManager {
 		screenPage = new ScreenPage(driver);
 
 		return screenPage;
+	}
+	public SignInPage getSignInPage()
+
+	{
+		signinPage = new SignInPage(driver);
+
+		return signinPage;
+	}
+	
+	public CreatePlanPage getCreatePlanPage()
+
+	{
+		createplanPage = new CreatePlanPage(driver);
+		
+		return createplanPage;
+	}
+	
+	public DietPlanPage getDietPlanPage()
+	{
+		dietPlanPage = new DietPlanPage(driver);
+		
+		return dietPlanPage;
 	}
 
 }
