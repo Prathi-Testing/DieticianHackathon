@@ -1,5 +1,8 @@
 @DieticianLogin
 Feature: Add New Patient Page
+Background:
+	Given User is on Dietician Website 
+	Then User clicks Sign In with all field entered
 
   Scenario: Add New Patient Details
     Given User is on the Add New Patient Page
