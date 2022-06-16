@@ -1,3 +1,4 @@
+@GenerateNewDiet
 Feature: DIfferent features in Diet plan page
 Background:
 		Given User is on Dietician Website 

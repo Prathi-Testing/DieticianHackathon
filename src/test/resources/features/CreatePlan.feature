@@ -1,3 +1,4 @@
+@GenerateNewDietPlan
 Feature: Create Plan page functions 
 Background: 
 	Given User is on Dietician Website 
@@ -72,8 +73,7 @@ Scenario Outline: Validating the Upload functionality with incorrect file size
 		|CreatePlanPage |     1    | 
 		
 		
-Scenario Outline:
-Validating the Upload functionality with incorrect file format and size 
+Scenario Outline: Validating the Upload functionality with incorrect file format and size 
 
 
 	When User clicks the Upload button by selecting a non-pdf file of size greater than 2MB as "<SheetName>" and <RowNumber> 
@@ -84,8 +84,7 @@ Validating the Upload functionality with incorrect file format and size
 		|CreatePlanPage|   2     |
 		
 		
-Scenario Outline:
-Validating the Upload functionality with correct file format and size 
+Scenario Outline: Validating the Upload functionality with correct file format and size 
 
 
 	When User clicks the Upload button by selecting a pdf file of size less than 2MB as "<SheetName>" and <RowNumber> 

@@ -1,3 +1,4 @@
+@DieticianSoftwareHome
 Feature: Visibility of Text in Menu bar Home page 
 Background: 
 	Given User is on Dietician Website

@@ -88,11 +88,6 @@ public class LogInStepDef {
 
 	}
 
-	@When("^User clicks on Forgot Password button$")
-	public void user_clicks_on_forgot_password_button() {
-		signinPage.ForgotYourPassword();
-	}
-
 	@When("^User clicks Google button to log in$")
 	public void user_click_Google_button_to_log_in() {
 		signinPage.GoogleLogIn();

@@ -1,3 +1,4 @@
+@PdfBox
 Feature: Test report pdf file
 
 Background:

@@ -1,3 +1,4 @@
+@Register
 Feature: Testing Register page functions 
 
 Background:

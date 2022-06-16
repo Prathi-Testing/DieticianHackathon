@@ -1,3 +1,4 @@
+@ScreenAfterSignin
 Feature: List of Dietician screen 
 Background: 
 	Given User is on Dietician Website 

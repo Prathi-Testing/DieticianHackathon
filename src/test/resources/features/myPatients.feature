@@ -1,3 +1,4 @@
+@MyPatients
 Feature: My Patient
 Background:
 		Given User is on Dietician Website 

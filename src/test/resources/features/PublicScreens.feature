@@ -1,3 +1,4 @@
+@PublicScreensFeature: 
 Feature: List of screen in public screen 
 Background: 
 	Given User is on Dietician Website 
