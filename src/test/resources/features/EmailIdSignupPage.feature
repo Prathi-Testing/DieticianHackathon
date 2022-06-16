@@ -1,3 +1,4 @@
+@Register
 Feature: Signup using email id  Function
 Background: 
   Given User is on Dietician Website

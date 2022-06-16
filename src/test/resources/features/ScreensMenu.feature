@@ -1,3 +1,4 @@
+@MenuScreen
 Feature: List of Screens menu visibility
 Background: 
 Given User is on Dietician Website

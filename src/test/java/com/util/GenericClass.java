@@ -36,7 +36,7 @@ public class GenericClass {
 	//*********   data from excel  **********  //
 	List<Map<String, String>> data = null;
 	try {
-		data = testContext.reader.getData(System.getProperty("user.dir") + "//src//test//resources//testData", SheetName);
+		data = testContext.reader.getData(System.getProperty("user.dir") + "src\\test\\resources\\testData\\Dietician UI Hackathon.xlsx", SheetName);
 	} catch (InvalidFormatException e) {
 		e.printStackTrace();
 	} catch (IOException e) {

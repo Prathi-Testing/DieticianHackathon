@@ -1,7 +1,8 @@
+@DieticianSoftware
 Feature: Testing Home page functions 
 
 Background:
-    Given User is on Dietician Website 
+    Given User is on Dietician Website
     When User is on Home page 
     
 Scenario Outline: Validating the title of the Home page 

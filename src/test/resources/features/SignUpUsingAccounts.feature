@@ -1,3 +1,4 @@
+@Register
 Feature: Signup using accounts Function
 Background: 
   Given User is on Dietician Website

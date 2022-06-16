@@ -1,3 +1,4 @@
+@GenerateNewDietPlan
 Feature: Create Plan page functions 
 Background: 
 	Given User is on Dietician Website 

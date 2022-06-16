@@ -1,3 +1,4 @@
+@TeamPagePagination
 Feature: Validating Pagination in Team Page
 Background: 
 	Given User is on Dietician Website 

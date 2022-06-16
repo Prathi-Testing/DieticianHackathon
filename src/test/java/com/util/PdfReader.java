@@ -20,13 +20,13 @@ public class PdfReader {
 		try {
 			url = new URL(Url);
 		} catch (MalformedURLException e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		}
 		try {
 			IS = url.openStream();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		}
 		
@@ -35,14 +35,14 @@ public class PdfReader {
 		try {
 			pdDoc = PDDocument.load(fileParse);
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		}
 		
 		try {
 			pdfContent = new PDFTextStripper().getText(pdDoc);
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		}
 		return pdfContent;

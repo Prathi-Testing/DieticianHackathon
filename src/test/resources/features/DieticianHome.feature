@@ -1,3 +1,4 @@
+@DieticianHome
 Feature: Dietician Home Page
 Background:
 		Given User is on Dietician Website

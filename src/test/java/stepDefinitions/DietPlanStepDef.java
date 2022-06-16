@@ -57,7 +57,7 @@ public class DietPlanStepDef {
 	{
 		Assert.assertTrue(dietPlanPage.checkDietPlansTab());
 	}
-
+  
 	@Then("User should see five records per page")
 	public void user_should_see_five_records_per_page() 
 	{

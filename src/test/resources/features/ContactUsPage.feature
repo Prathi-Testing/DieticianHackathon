@@ -1,3 +1,4 @@
+@ContactUs
 Feature: User fill data in Contact Us form 
 Background: 
 	Given User is on Dietician Website 
