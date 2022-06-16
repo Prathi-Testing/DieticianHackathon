@@ -58,12 +58,6 @@ public class DietPlanStepDef {
 		Assert.assertTrue(dietPlanPage.checkDietPlansTab());
 	}
 
-	@When("User is on View Recent Diets Page")
-	public void user_is_on_view_recent_diet_page() 
-	{
-		actualTitle = dietPlanPage.getTitle();
-	}
-
 	@Then("User should see five records per page")
 	public void user_should_see_five_records_per_page() 
 	{
