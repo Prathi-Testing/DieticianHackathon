@@ -2,10 +2,8 @@ package stepDefinitions;
 
 import org.testng.Assert;
 
-
 import com.base.TestContext;
 import com.pages.*;
-
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -18,7 +16,8 @@ public class HomePageStepDef {
 	private String Title;
 	private String expectedTitle;
 	private String registerTitle;
-	private String expectedHomePageTitle = "Dietician Software";
+	private String expectedHomePageTitle = "Dietician software";
+
 
 	public HomePageStepDef(TestContext testContext) {
 		this.testContext = testContext;
@@ -27,8 +26,7 @@ public class HomePageStepDef {
 
 	@Given("User is on Dietician Website")
 	public void user_lands_dietician_website() {
-       
-		
+
 	   Assert.assertEquals(homePage.getTitle(),expectedHomePageTitle);
 		
 	}

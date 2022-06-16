@@ -38,7 +38,7 @@
 								<name>dataproviderthreadcount</name>
 								<value>5</value>
 							</property>
-						</properties>
+					</properties>
 					<testFailureIgnore>true</testFailureIgnore>
 					<!-- Suite testng xml file to consider for test execution -->
 				</configuration>
