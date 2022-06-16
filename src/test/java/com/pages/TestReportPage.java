@@ -11,8 +11,10 @@ import org.openqa.selenium.support.PageFactory;
 public class TestReportPage {
 	
 	WebDriver driver;
+	
 	private String pdfLink;
-	boolean flag;
+	
+	private boolean flag;
 	
 	@FindBy(id="Patient Tab")
 	private WebElement patientTab;

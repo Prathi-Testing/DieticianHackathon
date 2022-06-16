@@ -1,10 +1,8 @@
-@DieticianLogin
 Feature: Dietician Home Page
 Background:
 		Given User is on Dietician Website 
 		When User clicks Sign In with all field entered
-		Then User is on the "Dietician Home" page 
-	
+		
   Scenario: Verify Dietician Home Page After Login
     Then User can see the Home button on header menu
 

@@ -73,7 +73,6 @@ Scenario: Validation of traversing previous page when one page is displayed
 
 
 Scenario: Validation of View PDF option
-  Given User is on the "Dietician Home" page
   When User is on View Recent Diets Page
   Then View PDF option is available for the generated diet plans
 

@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class ScreenPage {
 
-	public WebDriver driver;
+	WebDriver driver;
 	
     @FindBy(id = "nav-hamburger-menu")
     private WebElement screen;

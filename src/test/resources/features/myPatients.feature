@@ -1,6 +1,8 @@
-@DieticianLogin
 Feature: My Patient
-  
+Background:
+		Given User is on Dietician Website 
+		When User clicks Sign In with all field entered
+		
  Scenario: Verify my patient tab
   Given User is on any page after login
   When User clicks on My Patients tab
