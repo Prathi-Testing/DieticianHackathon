@@ -3,6 +3,7 @@ Background:
 		Given User is on Dietician Website 
 		When User clicks Sign In with all field entered
 		
+
  Scenario: Verify my patient tab
   Given User is on any page after login
   When User clicks on My Patients tab
@@ -126,6 +127,7 @@ Background:
     Then It shows columns name like Record Number, Cust ID, Name, Details, Last Visit and Actions
 
   Scenario: Verify Action column has buttons
+  
     Given User is on My Patients tab
     When User clicks on search button with or without all fields empty
     Then It shows action buttons for View Previous Test Report, View Previous Diet Plans, Create New Report Plan

@@ -2,13 +2,13 @@ Feature: Sign In Page validations
 
   Background: 
     Given User is on Dietician Website
-    When User clicks on icon symbol
+    When User select Signin link under public
 
   Scenario: Validating the title of Sign In Page
     Then User should see the title of the page as Sign In
 
   Scenario: Validating the Sign In page mandatory fields
-    Then User should see star on all mandatory fields
+    Then  User should see star on the all mandatory fields 
 
   Scenario: Validating the Sign In form heading
     Then User should see a form with heading "Sign In form", to sign In using Username
@@ -17,7 +17,7 @@ Feature: Sign In Page validations
     Then User should see a button with text SIGN IN in the Sign In form
 
   Scenario Outline: Validating Sign In Process with all fields empty
-    When User clicks Sign In Button in the Sign In form with all fields empty .
+    When User clicks Sign In Button in the Sign In form with all fields empty
     Then User should get error message "<sheetName>" <rowNumber>
 
     Examples: 

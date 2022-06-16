@@ -70,7 +70,8 @@ public class HomePageStepDef {
 
 		homePage.getFeaturedLink();
 	}
-
+	
+	
 	@When("User clicks on Blog Link on  Home Page")
 	public void user_clicks_on_blog_link_on_home_page() {
 		homePage.getBlogLink();
@@ -89,6 +90,11 @@ public class HomePageStepDef {
 	@When("User Clicks on the Team Page")
 	public void user_clicks_on_the_team_page() {
 		homePage.getTeamLink();
+	}
+	@When("User lands on Sign In page")
+	public void User_lands_on_Sign_In_page()
+	{
+		homePage.clickSignin();
 	}
 
 	@Then("User should see the title of the page as details in excel {string} and RowNUmber {int}")
