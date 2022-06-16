@@ -6,11 +6,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class SignInPage {
-
-	public WebDriver driver;
-
-	@FindBy(name = "Sign In")
+public class SignInPage  {
+	
+	WebDriver driver;
+	
+	@FindBy(name="Sign In")
 	WebElement SignIn;
 
 	@FindBy(xpath = "//span[contains(text(), '*')]")

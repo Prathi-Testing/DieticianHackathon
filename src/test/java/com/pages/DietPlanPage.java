@@ -10,7 +10,8 @@ import org.openqa.selenium.support.PageFactory;
 public class DietPlanPage {
 
 	WebDriver driver;
-    private String pdfLink;
+    
+	private String pdfLink;
     boolean flag;
     
 	@FindBy(id = "Heading")
@@ -48,8 +49,6 @@ public class DietPlanPage {
 		PageFactory.initElements(driver, this);
 	}
 
-	// Validating the heading
-
 	public String getHeading()
 	{
 		return heading.getText();
@@ -67,7 +66,6 @@ public class DietPlanPage {
 	}
 	
 	
-	// Validating the tabs on the menu bar of Diets page
 	public Boolean checkDietPlansTab() {
 		return dietPlansTab.isDisplayed();
 	}

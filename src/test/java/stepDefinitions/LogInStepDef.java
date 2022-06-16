@@ -25,10 +25,9 @@ public class LogInStepDef {
 	}
 
 	@When("^User clicks Log In button with all fields empty$")
-	public void user_clicks_log_in_button_with_all_fields_empty(String sheetname, int rownumber) {
-		String sheetName = null;
-		int rowNumber = 0;
-		Map<String, String> xlvalue = testContext.gUtil.getxlData(sheetName).get(rowNumber);
+	public void user_clicks_log_in_button_with_all_fields_empty(String sheetname, Integer rownumber) {
+		
+		Map<String, String> xlvalue = testContext.gUtil.getxlData(sheetname).get(rownumber);
 		String uName = xlvalue.get("First Name");
 		String pwd = xlvalue.get("Password");
 
@@ -39,10 +38,9 @@ public class LogInStepDef {
 
 	@When("^User clicks Log In button with invalid email and valid password values \"([^\"]*)\" (.+)$")
 	public void user_clicks_log_in_button_with_invalid_email_and_valid_password_values_something(String sheetname,
-			String rownumber) {
-		String sheetName = null;
-		int rowNumber = 0;
-		Map<String, String> xlvalue = testContext.gUtil.getxlData(sheetName).get(rowNumber);
+			Integer rownumber) {
+		
+		Map<String, String> xlvalue = testContext.gUtil.getxlData(sheetname).get(rownumber);
 		String uName = xlvalue.get("First Name");
 		String pwd = xlvalue.get("Password");
 
@@ -53,10 +51,9 @@ public class LogInStepDef {
 
 	@When("^User clicks Log In button with valid email and empty password values \"([^\"]*)\" (.+)$")
 	public void user_clicks_log_in_button_with_valid_email_and_empty_password_values_something(String sheetname,
-			String rownumber) {
-		String sheetName = null;
-		int rowNumber = 0;
-		Map<String, String> xlvalue = testContext.gUtil.getxlData(sheetName).get(rowNumber);
+			Integer rownumber) {
+		
+		Map<String, String> xlvalue = testContext.gUtil.getxlData(sheetname).get(rownumber);
 		String uName = xlvalue.get("First Name");
 		String pwd = xlvalue.get("Password");
 
@@ -67,10 +64,9 @@ public class LogInStepDef {
 
 	@When("^User clicks Log In with both invalid email and password values \"([^\"]*)\" (.+)$")
 	public void user_clicks_log_in_with_both_invalid_email_and_password_values_something(String sheetname,
-			String rownumber, String strArg1) {
-		String sheetName = null;
-		int rowNumber = 0;
-		Map<String, String> xlvalue = testContext.gUtil.getxlData(sheetName).get(rowNumber);
+			Integer rownumber) {
+		
+		Map<String, String> xlvalue = testContext.gUtil.getxlData(sheetname).get(rownumber);
 		String uName = xlvalue.get("First Name");
 		String pwd = xlvalue.get("Password");
 
@@ -81,10 +77,9 @@ public class LogInStepDef {
 
 	@When("^User clicks Log In with both valid email and password values \"([^\"]*)\" (.+)$")
 	public void user_clicks_log_in_with_both_valid_email_and_password_values_something(String sheetname,
-			String rownumber) {
-		String sheetName = null;
-		int rowNumber = 0;
-		Map<String, String> xlvalue = testContext.gUtil.getxlData(sheetName).get(rowNumber);
+			Integer rownumber) {
+		
+		Map<String, String> xlvalue = testContext.gUtil.getxlData(sheetname).get(rownumber);
 		String uName = xlvalue.get("First Name");
 		String pwd = xlvalue.get("Password");
 
@@ -112,7 +107,7 @@ public class LogInStepDef {
 	@Then("^User should see a form with heading$")
 	public void user_should_see_a_form_with_heading_something_form_to_log_in_with_your_email(String strArg1) {
 		String ActualEmailLoginHeading = signinPage.SignInHeading();
-
+		
 		Assert.assertEquals(ActualEmailLoginHeading, expectedEmailLoginHeading);
 
 	}

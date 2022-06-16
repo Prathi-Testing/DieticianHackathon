@@ -6,7 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class NewPatientPage {
-	public WebDriver driver;
+	WebDriver driver;
 	
 	@FindBy(id="patientdata")
 	private WebElement patientData;

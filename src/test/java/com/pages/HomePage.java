@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class HomePage {
 
-	public WebDriver driver;
+	WebDriver driver;
 
 	@FindBy(xpath = "//img[@alt='logo']")
 	private WebElement logo;

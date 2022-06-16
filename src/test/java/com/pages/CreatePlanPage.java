@@ -2,7 +2,6 @@ package com.pages;
 
 import java.io.IOException;
 import java.util.List;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -12,9 +11,11 @@ import org.openqa.selenium.support.PageFactory;
 public class CreatePlanPage {
 	
 	
-	public WebDriver driver;
+	WebDriver driver;
+	
 	@FindBy(xpath= "//span[@class = 'action']")
     private  WebElement browse;
+	
 	@FindBy(xpath = "//*[@class='soc-ico show-round']/a[4]")
 	private WebElement toolTip;
 	
@@ -156,8 +157,3 @@ public class CreatePlanPage {
 
 	 
 }
-   
-  
-  
-
-

@@ -3,12 +3,6 @@ package com.base;
 import org.openqa.selenium.WebDriver;
 
 import com.pages.*;
-import com.pages.DieticianHomePage;
-import com.pages.HomePage;
-import com.pages.NewPatientPage;
-import com.pages.TeamPage;
-
-
 
 public class PageObjectManager {
 	
@@ -21,10 +15,8 @@ public class PageObjectManager {
 	private SignUpPage signupPage;
 	private SignInPage signinPage;
 	private ScreenPage screenPage;
-
 	private TestReportPage testReportPage;
 	private MyPatientPage myPatientPage;
-	
 	private CreatePlanPage createplanPage;
 	private DietPlanPage dietPlanPage;
 
