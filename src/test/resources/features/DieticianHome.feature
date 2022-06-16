@@ -50,7 +50,7 @@ Background:
     Then User can click on SIGN OUT button and log off successfully as "<SheetName>" and <RowNumber>
     Examples:
       | SheetName           | RowNumber |
-      | Page_Title					|         4 |
+      | Page_Title			    |         4 |
     
     
 
