@@ -10,7 +10,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class SignInPage  {
 	
-	public WebDriver driver;
+	WebDriver driver;
 	
 	@FindBy(name="Sign In")
 	WebElement SignIn;

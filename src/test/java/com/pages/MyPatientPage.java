@@ -10,7 +10,8 @@ import org.openqa.selenium.support.PageFactory;
 public class MyPatientPage {
 
 	WebDriver driver;
-	Boolean flag;
+	
+	private Boolean flag;
 	
 	@FindBy(xpath = "//span[contains(text(),'My Patients')]") 
 	private WebElement tabMyPatient;
