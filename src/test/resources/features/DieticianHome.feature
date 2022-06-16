@@ -21,7 +21,7 @@ Background:
 
 		Examples: 
       | SheetName           | RowNumber |
-      | Page_Title					|         0 |
+      | Page_Title			|         0 |
 
   Scenario Outline: Clicking My Patient Page After Login
     When User selects My Patient button
@@ -29,7 +29,7 @@ Background:
     
     Examples: 
       | SheetName           | RowNumber |
-      | Page_Title					|         2 |
+      | Page_Title			|         2 |
     
 
   Scenario Outline: Clicking Diet Plans Page After Login
@@ -38,7 +38,7 @@ Background:
     
     Examples: 
       | SheetName           | RowNumber |
-      | Page_Title					|         3 |
+      | Page_Title			|         3 |
     
 
   Scenario: Verify Dietician Home Page Side Bar After Login
@@ -56,6 +56,6 @@ Background:
     
     Examples: 
       | SheetName           | RowNumber |
-      | Page_Title					|         4 |
+      | Page_Title			|         4 |
     
     
