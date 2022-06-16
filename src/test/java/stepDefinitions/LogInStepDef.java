@@ -109,7 +109,7 @@ public class LogInStepDef {
 		signinPage.FacebookLogIn();
 	}
 
-	@Then("^User should see a form with heading login with your email form$")
+	@Then("^User should see a form with heading$")
 	public void user_should_see_a_form_with_heading_something_form_to_log_in_with_your_email(String strArg1) {
 		String ActualEmailLoginHeading = signinPage.SignInHeading();
 
@@ -117,14 +117,14 @@ public class LogInStepDef {
 
 	}
 
-	@Then("^User should see a button with text Log in$")
+	@Then("User should see a button with text {string}")
 	public void user_should_see_a_button_with_text_Log_in() {
 		String ActualLoginButtonText = signinPage.LogInButton();
 		Assert.assertEquals(ActualLoginButtonText, expectedLoginButtonText);
 
 	}
 
-	@Then("^User gets  error message \"([^\"]*)\" (.+)$")
+	@Then("User gets error message \"([^\"]*)\" (.+)")
 	public void user_gets_error_message_something(String sheetName, int rowNumber) {
 		String ActualMessage = signinPage.getmessage();
 		String expectedMessage = testContext.gUtil.getxlData(sheetName).get(rowNumber).get("Heading");
